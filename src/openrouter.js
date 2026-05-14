@@ -6,6 +6,11 @@ const openai = new OpenAI({
 
   apiKey: import.meta.env.VITE_OPENROUTER_API_KEY,
 
+  defaultHeaders: {
+    'HTTP-Referer': 'https://promocion-admision-educacion-mx.netlify.app',
+    'X-Title': 'USICAMM Platform'
+  },
+
   dangerouslyAllowBrowser: true
 
 })
