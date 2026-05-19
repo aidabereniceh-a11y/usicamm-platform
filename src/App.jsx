@@ -1,5 +1,5 @@
 import { Routes, Route, Link } from "react-router-dom";
-
+import HorasAdicionales from "./pages/HorasAdicionales";
 import SimuladorUsicamm2026 from "./pages/SimuladorUsicamm2026";
 import AdmisionDocente2026 from "./pages/AdmisionDocente2026";
 
@@ -40,7 +40,12 @@ function Home() {
           >
             Simulador
           </Link>
-
+<Link
+  to="/horas-adicionales"
+  style={{ color: "white", textDecoration: "none" }}
+>
+  Horas
+</Link>
           <Link
             to="/admision-docente-2026"
             style={{ color: "white", textDecoration: "none" }}
