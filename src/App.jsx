@@ -208,7 +208,10 @@ export default function App() {
         path="/admision-docente-2026"
         element={<AdmisionDocente2026 />}
       />
-
+<Route
+  path="/horas-adicionales"
+  element={<HorasAdicionales />}
+/>
     </Routes>
   );
 }
