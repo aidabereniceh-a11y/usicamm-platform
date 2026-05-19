@@ -1,6 +1,6 @@
 import { Routes, Route, Link } from "react-router-dom";
 import SimuladorUsicamm2026 from "./pages/SimuladorUsicamm2026";
-
+import AdmisionDocente2026 from "./pages/AdmisionDocente2026";
 function Home() {
   return (
     <div style={{ padding: "40px", fontFamily: "Arial" }}>
