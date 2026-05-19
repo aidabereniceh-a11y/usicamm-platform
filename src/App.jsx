@@ -25,7 +25,24 @@ function Home() {
         }}
       >
         <h2>Promoción Docente MX</h2>
+<div
+  style={{
+    backgroundColor: "white",
+    padding: "30px",
+    borderRadius: "20px",
+    boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+  }}
+>
+  <h2>Horas Adicionales</h2>
 
+  <p>
+    Estrategias y recursos para horas adicionales.
+  </p>
+
+  <Link to="/horas-adicionales">
+    Ver más →
+  </Link>
+</div>
         <div style={{ display: "flex", gap: "20px" }}>
           <Link
             to="/"
