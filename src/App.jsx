@@ -1,4 +1,5 @@
 import { Routes, Route, Link } from "react-router-dom";
+
 import HorasAdicionales from "./pages/HorasAdicionales";
 import SimuladorUsicamm2026 from "./pages/SimuladorUsicamm2026";
 import AdmisionDocente2026 from "./pages/AdmisionDocente2026";
@@ -17,7 +18,7 @@ function Home() {
       <nav
         style={{
           backgroundColor: "#1e3a8a",
-          padding: "20px",
+          padding: "15px 40px",
           color: "white",
           display: "flex",
           justifyContent: "space-between",
@@ -25,24 +26,7 @@ function Home() {
         }}
       >
         <h2>Promoción Docente MX</h2>
-<div
-  style={{
-    backgroundColor: "white",
-    padding: "30px",
-    borderRadius: "20px",
-    boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
-  }}
->
-  <h2>Horas Adicionales</h2>
 
-  <p>
-    Estrategias y recursos para horas adicionales.
-  </p>
-
-  <Link to="/horas-adicionales">
-    Ver más →
-  </Link>
-</div>
         <div style={{ display: "flex", gap: "20px" }}>
           <Link
             to="/"
@@ -57,12 +41,14 @@ function Home() {
           >
             Simulador
           </Link>
-<Link
-  to="/horas-adicionales"
-  style={{ color: "white", textDecoration: "none" }}
->
-  Horas
-</Link>
+
+          <Link
+            to="/horas-adicionales"
+            style={{ color: "white", textDecoration: "none" }}
+          >
+            Horas
+          </Link>
+
           <Link
             to="/admision-docente-2026"
             style={{ color: "white", textDecoration: "none" }}
@@ -77,13 +63,13 @@ function Home() {
       <section
         style={{
           textAlign: "center",
-          padding: "80px 20px",
+          padding: "60px 20px",
           background:
             "linear-gradient(to right, #2563eb, #1d4ed8)",
           color: "white",
         }}
       >
-        <h1 style={{ fontSize: "48px" }}>
+        <h1 style={{ fontSize: "64px" }}>
           Plataforma USICAMM 2026
         </h1>
 
@@ -105,7 +91,7 @@ function Home() {
             style={{
               backgroundColor: "white",
               color: "#1d4ed8",
-              padding: "15px 30px",
+              padding: "18px 40px",
               borderRadius: "10px",
               textDecoration: "none",
               fontWeight: "bold",
@@ -191,6 +177,27 @@ function Home() {
             Próximamente
           </a>
         </div>
+
+        {/* CARD 4 */}
+
+        <div
+          style={{
+            backgroundColor: "white",
+            padding: "30px",
+            borderRadius: "20px",
+            boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+          }}
+        >
+          <h2>Horas Adicionales</h2>
+
+          <p>
+            Estrategias y recursos para horas adicionales.
+          </p>
+
+          <Link to="/horas-adicionales">
+            Ver más →
+          </Link>
+        </div>
       </section>
 
       {/* FOOTER */}
@@ -213,7 +220,6 @@ function Home() {
 export default function App() {
   return (
     <Routes>
-
       <Route path="/" element={<Home />} />
 
       <Route
@@ -225,10 +231,11 @@ export default function App() {
         path="/admision-docente-2026"
         element={<AdmisionDocente2026 />}
       />
-<Route
-  path="/horas-adicionales"
-  element={<HorasAdicionales />}
-/>
+
+      <Route
+        path="/horas-adicionales"
+        element={<HorasAdicionales />}
+      />
     </Routes>
   );
 }
