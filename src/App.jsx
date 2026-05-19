@@ -1,6 +1,8 @@
 import { Routes, Route, Link } from "react-router-dom";
+
 import SimuladorUsicamm2026 from "./pages/SimuladorUsicamm2026";
 import AdmisionDocente2026 from "./pages/AdmisionDocente2026";
+
 function Home() {
   return (
     <div style={{ padding: "40px", fontFamily: "Arial" }}>
@@ -12,9 +14,19 @@ function Home() {
       </p>
 
       <nav style={{ marginTop: "20px" }}>
-        <Link to="/simulador-usicamm-2026">
-          Ir al Simulador USICAMM 2026
-        </Link>
+
+        <div style={{ marginBottom: "10px" }}>
+          <Link to="/simulador-usicamm-2026">
+            Simulador USICAMM 2026
+          </Link>
+        </div>
+
+        <div>
+          <Link to="/admision-docente-2026">
+            Admisión Docente 2026
+          </Link>
+        </div>
+
       </nav>
     </div>
   );
@@ -23,12 +35,19 @@ function Home() {
 export default function App() {
   return (
     <Routes>
+
       <Route path="/" element={<Home />} />
 
       <Route
         path="/simulador-usicamm-2026"
         element={<SimuladorUsicamm2026 />}
       />
+
+      <Route
+        path="/admision-docente-2026"
+        element={<AdmisionDocente2026 />}
+      />
+
     </Routes>
   );
 }
