@@ -1,41 +1,34 @@
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Link } from "react-router-dom";
+import SimuladorUsicamm2026 from "./pages/SimuladorUsicamm2026";
 
-import Header from './components/Header'
-import Footer from './components/Footer'
+function Home() {
+  return (
+    <div style={{ padding: "40px", fontFamily: "Arial" }}>
+      <h1>Promoción Docente MX</h1>
 
-import Home from './pages/Home'
-import Simulator from './pages/Simulator'
-import Dashboard from './pages/Dashboard'
+      <p>
+        Plataforma educativa para docentes: simuladores USICAMM,
+        reactivos, guías y recursos gratuitos.
+      </p>
+
+      <nav style={{ marginTop: "20px" }}>
+        <Link to="/simulador-usicamm-2026">
+          Ir al Simulador USICAMM 2026
+        </Link>
+      </nav>
+    </div>
+  );
+}
 
 export default function App() {
-
   return (
+    <Routes>
+      <Route path="/" element={<Home />} />
 
-    <div className="min-h-screen bg-gray-100">
-
-      <Header />
-
-      <Routes>
-
-        <Route
-          path="/"
-          element={<Home />}
-        />
-
-        <Route
-          path="/simulator/:type"
-          element={<Simulator />}
-        />
-
-        <Route
-          path="/dashboard"
-          element={<Dashboard />}
-        />
-
-      </Routes>
-
-      <Footer />
-
-    </div>
-  )
+      <Route
+        path="/simulador-usicamm-2026"
+        element={<SimuladorUsicamm2026 />}
+      />
+    </Routes>
+  );
 }
