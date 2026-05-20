@@ -1,10 +1,10 @@
-export default function NuevaEscuelaMexicana() {
+export default function EvaluacionDiagnostica() {
   return (
     <div style={{ padding: "40px", fontFamily: "Arial" }}>
-      <h1>Nueva Escuela Mexicana</h1>
+      <h1>Evaluación Diagnóstica</h1>
 
       <p>
-        Recursos y materiales sobre la Nueva Escuela Mexicana.
+        Recursos y herramientas para evaluación diagnóstica docente.
       </p>
     </div>
   );
