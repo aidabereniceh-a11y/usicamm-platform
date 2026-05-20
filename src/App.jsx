@@ -3,7 +3,13 @@ import { Routes, Route, Link } from "react-router-dom";
 import HorasAdicionales from "./pages/HorasAdicionales";
 import SimuladorUsicamm2026 from "./pages/SimuladorUsicamm2026";
 import AdmisionDocente2026 from "./pages/AdmisionDocente2026";
-
+import PromocionHorizontal from "./pages/PromocionHorizontal";
+import PromocionVertical from "./pages/PromocionVertical";
+import ReactivosPdf from "./pages/ReactivosPdf";
+import GuiaUsicamm2026 from "./pages/GuiaUsicamm2026";
+import PlaneacionesNem from "./pages/PlaneacionesNem";
+import NuevaEscuelaMexicana from "./pages/NuevaEscuelaMexicana";
+import EvaluacionDiagnostica from "./pages/EvaluacionDiagnostica";
 function Home() {
   return (
     <div
