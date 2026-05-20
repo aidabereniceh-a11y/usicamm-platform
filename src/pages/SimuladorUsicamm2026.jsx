@@ -15,7 +15,13 @@ export default function SimuladorUsicamm2026() {
 
   const [tiempo, setTiempo] = useState(300);
 
-  const preguntaActual = preguntas[indice];
+  const preguntaActual = {
+  ...preguntas[indice],
+
+  opciones: [...preguntas[indice].opciones].sort(
+    () => Math.random() - 0.5
+  ),
+};
 
   // TIMER
 
