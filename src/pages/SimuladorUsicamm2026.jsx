@@ -44,6 +44,7 @@ export default function SimuladorUsicamm2026() {
   // SONIDO
 
   function reproducirSonido() {
+
     const audio = new Audio(
       "https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg"
     );
@@ -60,6 +61,7 @@ export default function SimuladorUsicamm2026() {
     setRespuesta(opcion);
 
     if (opcion === preguntaActual.correcta) {
+
       setPuntaje((prev) => prev + 1);
     }
   }
@@ -93,6 +95,7 @@ export default function SimuladorUsicamm2026() {
           textAlign: "center",
         }}
       >
+
         <h1>Examen Finalizado 🎉</h1>
 
         <h2>
@@ -104,7 +107,6 @@ export default function SimuladorUsicamm2026() {
         </p>
 
       </div>
-
     );
   }
 
