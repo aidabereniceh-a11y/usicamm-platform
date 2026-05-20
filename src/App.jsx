@@ -242,6 +242,40 @@ export default function App() {
         path="/horas-adicionales"
         element={<HorasAdicionales />}
       />
+      <Route
+  path="/promocion-horizontal-usicamm"
+  element={<PromocionHorizontal />}
+/>
+
+<Route
+  path="/promocion-vertical-usicamm"
+  element={<PromocionVertical />}
+/>
+
+<Route
+  path="/reactivos-usicamm-pdf"
+  element={<ReactivosPdf />}
+/>
+
+<Route
+  path="/guia-usicamm-2026"
+  element={<GuiaUsicamm2026 />}
+/>
+
+<Route
+  path="/planeaciones-nem"
+  element={<PlaneacionesNem />}
+/>
+
+<Route
+  path="/nueva-escuela-mexicana"
+  element={<NuevaEscuelaMexicana />}
+/>
+
+<Route
+  path="/evaluacion-diagnostica"
+  element={<EvaluacionDiagnostica />}
+/>
     </Routes>
   );
 }
