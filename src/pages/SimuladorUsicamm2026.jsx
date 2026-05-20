@@ -1,73 +1,12 @@
 import { useState, useEffect } from "react";
-
+import { preguntasUsicamm } from "../data/preguntasUsicamm";
 const preguntasOriginales = [
   {
-    pregunta: "¿Qué significa USICAMM?",
-    opciones: [
-      "Unidad del Sistema para la Carrera de las Maestras y los Maestros",
-      "Universidad del Sistema Educativo",
-      "Unidad Superior de Educación",
-      "Sistema Nacional Docente",
-    ],
-    correcta:
-      "Unidad del Sistema para la Carrera de las Maestras y los Maestros",
-  },
-
-  {
-    pregunta:
-      "¿Qué modelo educativo impulsa actualmente México?",
-    opciones: [
-      "Nueva Escuela Mexicana",
-      "Escuela Tradicional",
-      "Modelo Europeo",
-      "Sistema Internacional",
-    ],
-    correcta:
-      "Nueva Escuela Mexicana",
-  },
-
-  {
-    pregunta:
-      "¿Cuál es un elemento clave de la Nueva Escuela Mexicana?",
-    opciones: [
-      "Inclusión",
-      "Memorización",
-      "Exámenes diarios",
-      "Competencia extrema",
-    ],
-    correcta:
-      "Inclusión",
-  },
-
-  {
-    pregunta:
-      "¿Qué promueve la Nueva Escuela Mexicana?",
-    opciones: [
-      "Aprendizaje comunitario",
-      "Castigos",
-      "Competencia extrema",
-      "Memorización",
-    ],
-    correcta:
-      "Aprendizaje comunitario",
-  },
-
-  {
-    pregunta:
-      "¿Cuál es un valor importante en educación?",
-    opciones: [
-      "Inclusión",
-      "Discriminación",
-      "Autoritarismo",
-      "Competencia agresiva",
-    ],
-    correcta:
-      "Inclusión",
-  },
+    
 ];
 
 // MEZCLAR PREGUNTAS
-const preguntas = [...preguntasOriginales].sort(
+const preguntas = [...preguntasUsicamm].sort(
   () => Math.random() - 0.5
 );
 
