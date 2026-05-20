@@ -1,9 +1,5 @@
 import { useState, useEffect } from "react";
 import { preguntasUsicamm } from "../data/preguntasUsicamm";
-const preguntasOriginales = [
-  {
-    
-];
 
 // MEZCLAR PREGUNTAS
 const preguntas = [...preguntasUsicamm].sort(
