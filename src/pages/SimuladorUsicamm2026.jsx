@@ -23,8 +23,9 @@ export default function SimuladorUsicamm2026() {
     useState(false);
 
   const [tiempo, setTiempo] = useState(300);
+
   const [opcionesMezcladas, setOpcionesMezcladas] =
-  useState([]);
+    useState([]);
 
   // CATEGORÍAS
 
@@ -88,19 +89,33 @@ export default function SimuladorUsicamm2026() {
 
   const preguntaActual =
     preguntas[indice];
-useEffect(() => {
 
-  if (preguntaActual) {
+  // MEZCLAR OPCIONES SOLO UNA VEZ
 
-    const mezcladas =
-      [...preguntaActual.opciones].sort(
-        () => Math.random() - 0.5
-      );
+  useEffect(() => {
 
-    setOpcionesMezcladas(mezcladas);
+    if (preguntaActual) {
+
+      const mezcladas =
+        [...preguntaActual.opciones].sort(
+          () => Math.random() - 0.5
+        );
+
+      setOpcionesMezcladas(mezcladas);
+    }
+
+  }, [indice, preguntaActual]);
+
+  // VALIDACIÓN
+
+  if (
+    examenIniciado &&
+    preguntas.length > 0 &&
+    !preguntaActual
+  ) {
+    return null;
   }
 
-}, [indice]);
   // SONIDO
 
   function reproducirSonido() {
@@ -276,8 +291,6 @@ useEffect(() => {
 
   const progreso =
     ((indice + 1) / preguntas.length) * 100;
-
- 
 
   // EXAMEN
 
