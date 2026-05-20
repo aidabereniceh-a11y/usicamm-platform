@@ -1,51 +1,91 @@
 import { useState, useEffect } from "react";
 import { preguntasUsicamm } from "../data/preguntasUsicamm";
 
-// MEZCLAR PREGUNTAS
-const preguntas = [...preguntasUsicamm].sort(
-  () => Math.random() - 0.5
-);
-
 export default function SimuladorUsicamm2026() {
 
+  // ESTADOS
+
+  const [categoriaSeleccionada, setCategoriaSeleccionada] =
+    useState("");
+
+  const [examenIniciado, setExamenIniciado] =
+    useState(false);
+
+  const [preguntas, setPreguntas] = useState([]);
+
   const [indice, setIndice] = useState(0);
+
   const [puntaje, setPuntaje] = useState(0);
+
   const [respuesta, setRespuesta] = useState("");
-  const [finalizado, setFinalizado] = useState(false);
+
+  const [finalizado, setFinalizado] =
+    useState(false);
 
   const [tiempo, setTiempo] = useState(300);
 
-  const preguntaActual = {
-  ...preguntas[indice],
+  // CATEGORÍAS
 
-  opciones: [...preguntas[indice].opciones].sort(
-    () => Math.random() - 0.5
-  ),
-};
+  const categorias = [
+    "Nueva Escuela Mexicana",
+    "Inclusión",
+    "Planeación",
+    "Evaluación",
+    "Valores",
+    "NEM",
+    "Comunidad",
+  ];
+
+  // INICIAR EXAMEN
+
+  function iniciarExamen() {
+
+    if (!categoriaSeleccionada) return;
+
+    const filtradas = preguntasUsicamm.filter(
+      (pregunta) =>
+        pregunta.categoria === categoriaSeleccionada
+    );
+
+    const mezcladas = [...filtradas].sort(
+      () => Math.random() - 0.5
+    );
+
+    setPreguntas(mezcladas);
+
+    setExamenIniciado(true);
+  }
 
   // TIMER
 
   useEffect(() => {
 
-    if (tiempo > 0 && !finalizado) {
+    if (
+      examenIniciado &&
+      tiempo > 0 &&
+      !finalizado
+    ) {
 
       const intervalo = setInterval(() => {
+
         setTiempo((prev) => prev - 1);
+
       }, 1000);
 
       return () => clearInterval(intervalo);
     }
 
     if (tiempo === 0) {
+
       setFinalizado(true);
     }
 
-  }, [tiempo, finalizado]);
+  }, [tiempo, finalizado, examenIniciado]);
 
-  // FORMATO TIMER
+  // PREGUNTA ACTUAL
 
-  const minutos = Math.floor(tiempo / 60);
-  const segundos = tiempo % 60;
+  const preguntaActual =
+    preguntas[indice];
 
   // SONIDO
 
@@ -88,6 +128,108 @@ export default function SimuladorUsicamm2026() {
     }
   }
 
+  // FORMATO TIMER
+
+  const minutos =
+    Math.floor(tiempo / 60);
+
+  const segundos =
+    tiempo % 60;
+
+  // PANTALLA INICIAL
+
+  if (!examenIniciado) {
+
+    return (
+
+      <div
+        style={{
+          padding: "40px",
+          fontFamily: "Arial",
+          textAlign: "center",
+          maxWidth: "700px",
+          margin: "0 auto",
+        }}
+      >
+
+        <h1
+          style={{
+            color: "#1e3a8a",
+          }}
+        >
+          Simulador USICAMM 2026
+        </h1>
+
+        <p
+          style={{
+            marginTop: "20px",
+            fontSize: "18px",
+          }}
+        >
+          Selecciona una categoría para iniciar el examen.
+        </p>
+
+        <div
+          style={{
+            display: "grid",
+            gap: "15px",
+            marginTop: "40px",
+          }}
+        >
+
+          {categorias.map((categoria) => (
+
+            <button
+              key={categoria}
+
+              onClick={() =>
+                setCategoriaSeleccionada(categoria)
+              }
+
+              style={{
+                padding: "18px",
+                borderRadius: "12px",
+                border: "none",
+                cursor: "pointer",
+
+                backgroundColor:
+                  categoriaSeleccionada === categoria
+                    ? "#1e3a8a"
+                    : "#2563eb",
+
+                color: "white",
+
+                fontSize: "16px",
+              }}
+            >
+              {categoria}
+            </button>
+
+          ))}
+
+        </div>
+
+        <button
+          onClick={iniciarExamen}
+
+          style={{
+            marginTop: "40px",
+            backgroundColor: "#111827",
+            color: "white",
+            padding: "18px 40px",
+            border: "none",
+            borderRadius: "12px",
+            cursor: "pointer",
+            fontSize: "18px",
+          }}
+        >
+          Iniciar Examen 🚀
+        </button>
+
+      </div>
+    );
+  }
+
   // FINAL
 
   if (finalizado) {
@@ -121,6 +263,15 @@ export default function SimuladorUsicamm2026() {
   const progreso =
     ((indice + 1) / preguntas.length) * 100;
 
+  // OPCIONES MEZCLADAS
+
+  const opcionesMezcladas =
+    [...preguntaActual.opciones].sort(
+      () => Math.random() - 0.5
+    );
+
+  // EXAMEN
+
   return (
 
     <div
@@ -140,6 +291,18 @@ export default function SimuladorUsicamm2026() {
       >
         Simulador USICAMM 2026
       </h1>
+
+      <h3
+        style={{
+          textAlign: "center",
+          marginTop: "10px",
+          color: "#2563eb",
+        }}
+      >
+        Categoría:
+        {" "}
+        {categoriaSeleccionada}
+      </h3>
 
       {/* TIMER */}
 
@@ -185,13 +348,19 @@ export default function SimuladorUsicamm2026() {
           backgroundColor: "white",
           padding: "40px",
           borderRadius: "25px",
-          boxShadow: "0 6px 18px rgba(0,0,0,0.12)",
+          boxShadow:
+            "0 6px 18px rgba(0,0,0,0.12)",
+
           marginTop: "40px",
         }}
       >
 
         <h2>
-          Pregunta {indice + 1} de {preguntas.length}
+          Pregunta {indice + 1}
+          {" "}
+          de
+          {" "}
+          {preguntas.length}
         </h2>
 
         <p
@@ -214,7 +383,7 @@ export default function SimuladorUsicamm2026() {
           }}
         >
 
-          {preguntaActual.opciones.map((opcion) => (
+          {opcionesMezcladas.map((opcion) => (
 
             <button
               key={opcion}
@@ -233,7 +402,8 @@ export default function SimuladorUsicamm2026() {
 
                 backgroundColor:
                   respuesta === opcion
-                    ? opcion === preguntaActual.correcta
+                    ? opcion ===
+                      preguntaActual.correcta
                       ? "#22c55e"
                       : "#ef4444"
                     : "#2563eb",
@@ -241,8 +411,6 @@ export default function SimuladorUsicamm2026() {
                 color: "white",
 
                 fontSize: "17px",
-
-                transition: "0.3s",
               }}
             >
               {opcion}
