@@ -200,12 +200,17 @@ export default function SimuladorUsicamm2026() {
         </p>
 
         <div
-          style={{
-            display: "grid",
-            gap: "15px",
-            marginTop: "40px",
-          }}
-        >
+  style={{
+    display: "grid",
+
+    gridTemplateColumns:
+      "repeat(auto-fit, minmax(300px, 1fr))",
+
+    gap: "20px",
+
+    marginTop: "40px",
+  }}
+>
 
           {categorias.map((categoria) => (
 
