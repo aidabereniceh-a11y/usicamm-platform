@@ -30,14 +30,15 @@ export default function SimuladorUsicamm2026() {
   // CATEGORÍAS
 
   const categorias = [
-    "Nueva Escuela Mexicana",
-    "Inclusión",
-    "Planeación",
-    "Evaluación",
-    "Valores",
-    "NEM",
-    "Comunidad",
-  ];
+  "Nueva Escuela Mexicana",
+  "Evaluación Formativa",
+  "Inclusión y Diversidad",
+  "Derechos y Legislación",
+  "Convivencia y Cultura de Paz",
+  "Planeación Didáctica",
+  "Desarrollo y Aprendizaje",
+  "Seguridad Escolar",
+];
 
   // INICIAR EXAMEN
 
