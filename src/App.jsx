@@ -10,6 +10,7 @@ import GuiaUsicamm2026 from "./pages/GuiaUsicamm2026";
 import PlaneacionesNem from "./pages/PlaneacionesNem";
 import NuevaEscuelaMexicana from "./pages/NuevaEscuelaMexicana";
 import EvaluacionDiagnostica from "./pages/EvaluacionDiagnostica";
+
 function Home() {
   return (
     <div
@@ -117,10 +118,11 @@ function Home() {
           gridTemplateColumns:
             "repeat(auto-fit, minmax(250px, 1fr))",
           gap: "30px",
-          maxWidth: "1200px",
+          maxWidth: "1400px",
           margin: "0 auto",
         }}
       >
+
         {/* CARD 1 */}
 
         <div
@@ -179,9 +181,9 @@ function Home() {
             Recursos para promoción horizontal USICAMM.
           </p>
 
-          <a href="#">
-            Próximamente
-          </a>
+          <Link to="/promocion-horizontal-usicamm">
+            Ver más →
+          </Link>
         </div>
 
         {/* CARD 4 */}
@@ -204,6 +206,49 @@ function Home() {
             Ver más →
           </Link>
         </div>
+
+        {/* CARD 5 */}
+
+        <div
+          style={{
+            backgroundColor: "white",
+            padding: "30px",
+            borderRadius: "20px",
+            boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+          }}
+        >
+          <h2>Promoción Vertical</h2>
+
+          <p>
+            Recursos y simuladores para promoción vertical.
+          </p>
+
+          <Link to="/promocion-vertical-usicamm">
+            Ver más →
+          </Link>
+        </div>
+
+        {/* CARD 6 */}
+
+        <div
+          style={{
+            backgroundColor: "white",
+            padding: "30px",
+            borderRadius: "20px",
+            boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+          }}
+        >
+          <h2>Reactivos PDF</h2>
+
+          <p>
+            Descarga reactivos y materiales PDF gratuitos.
+          </p>
+
+          <Link to="/reactivos-usicamm-pdf">
+            Ver más →
+          </Link>
+        </div>
+
       </section>
 
       {/* FOOTER */}
@@ -226,6 +271,7 @@ function Home() {
 export default function App() {
   return (
     <Routes>
+
       <Route path="/" element={<Home />} />
 
       <Route
@@ -242,40 +288,42 @@ export default function App() {
         path="/horas-adicionales"
         element={<HorasAdicionales />}
       />
+
       <Route
-  path="/promocion-horizontal-usicamm"
-  element={<PromocionHorizontal />}
-/>
+        path="/promocion-horizontal-usicamm"
+        element={<PromocionHorizontal />}
+      />
 
-<Route
-  path="/promocion-vertical-usicamm"
-  element={<PromocionVertical />}
-/>
+      <Route
+        path="/promocion-vertical-usicamm"
+        element={<PromocionVertical />}
+      />
 
-<Route
-  path="/reactivos-usicamm-pdf"
-  element={<ReactivosPdf />}
-/>
+      <Route
+        path="/reactivos-usicamm-pdf"
+        element={<ReactivosPdf />}
+      />
 
-<Route
-  path="/guia-usicamm-2026"
-  element={<GuiaUsicamm2026 />}
-/>
+      <Route
+        path="/guia-usicamm-2026"
+        element={<GuiaUsicamm2026 />}
+      />
 
-<Route
-  path="/planeaciones-nem"
-  element={<PlaneacionesNem />}
-/>
+      <Route
+        path="/planeaciones-nem"
+        element={<PlaneacionesNem />}
+      />
 
-<Route
-  path="/nueva-escuela-mexicana"
-  element={<NuevaEscuelaMexicana />}
-/>
+      <Route
+        path="/nueva-escuela-mexicana"
+        element={<NuevaEscuelaMexicana />}
+      />
 
-<Route
-  path="/evaluacion-diagnostica"
-  element={<EvaluacionDiagnostica />}
-/>
+      <Route
+        path="/evaluacion-diagnostica"
+        element={<EvaluacionDiagnostica />}
+      />
+
     </Routes>
   );
 }
