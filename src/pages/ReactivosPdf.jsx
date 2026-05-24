@@ -12,19 +12,24 @@ export default function ReactivosPdf() {
         style={{
           color: "#1d4ed8",
           marginBottom: "20px",
+          fontSize: "42px",
         }}
       >
-        Reactivos USICAMM PDF
+        Reactivos y Guías de Estudio PDF
       </h1>
 
       <p
         style={{
           fontSize: "20px",
           marginBottom: "30px",
+          maxWidth: "800px",
+          lineHeight: "1.6",
         }}
       >
-        Descarga reactivos tipo examen real para
-        admisión, promoción horizontal y vertical.
+        Descarga reactivos tipo examen real y Guías de
+        Estudio PDF gratuitos para admisión docente,
+        promoción horizontal, promoción vertical y
+        simuladores USICAMM 2026.
       </p>
 
       <a
@@ -38,6 +43,8 @@ export default function ReactivosPdf() {
           borderRadius: "10px",
           textDecoration: "none",
           fontWeight: "bold",
+          fontSize: "18px",
+          display: "inline-block",
         }}
       >
         Descargar PDF
