@@ -28,7 +28,7 @@ export default function ReactivosPdf() {
       </p>
 
       <a
-        href="/pdfs/reactivos-usicamm.pdf"
+        href="/pdfs/reactivos.pdf"
         target="_blank"
         rel="noopener noreferrer"
         style={{
