@@ -29,7 +29,7 @@ function Home() {
       <nav style={{ background: "linear-gradient(135deg, #166534, #15803d)", padding: "0 40px", color: "white", display: "flex", justifyContent: "space-between", alignItems: "center", height: "64px", boxShadow: "0 2px 12px rgba(0,0,0,0.15)", position: "sticky", top: 0, zIndex: 100 }}>
         <div style={{ fontSize: "20px", fontWeight: "800" }}>Promocion Docente MX</div>
         <div style={{ display: "flex", gap: "8px" }}>
-          {[{ label: "Inicio", to: "/" }, { label: "Simulador", to: "/simulador-usicamm-2026" }, { label: "Horas", to: "/horas-adicionales" }, { label: "Admision", to: "/admision-docente-2026" }].map((item) => (
+          {[{ label: "Inicio", to: "/" }, { label: "Simulador", to: "/simulador-usicamm-2026" }, { label: "Horas", to: "/horas-adicionales" }, { label: "Admision", to: "/admision-docente-2026" }, { label: "PasaLista \u2728", to: "https://pasalista.mx" }].map((item) => (
             <Link key={item.to} to={item.to} style={{ color: "white", textDecoration: "none", padding: "8px 16px", borderRadius: "8px", fontSize: "14px", fontWeight: "500" }}>{item.label}</Link>
           ))}
         </div>
