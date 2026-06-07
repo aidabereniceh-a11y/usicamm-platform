@@ -38,6 +38,7 @@ export default function SimuladorUsicamm2026() {
   "Planeación Didáctica",
   "Desarrollo y Aprendizaje",
   "Seguridad Escolar",
+  "Promoción Horizontal",
 ];
 
   // INICIAR EXAMEN
