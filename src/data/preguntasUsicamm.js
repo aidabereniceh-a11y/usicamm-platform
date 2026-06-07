@@ -452,5 +452,472 @@ export const preguntasUsicamm = [
     correcta:
       "Activar protocolos institucionales y canalización correspondiente.",
   },
+  // =========================
+  // PROMOCIÓN HORIZONTAL
+  // =========================
+
+  {
+    categoria: "Promoción Horizontal",
+    pregunta: "¿Cuál es el propósito principal de la Promoción Horizontal en la Carrera Magisterial?",
+    opciones: [
+      "Ascender al docente a un cargo directivo o de supervisión",
+      "Reconocer la trayectoria profesional del docente mejorando su nivel salarial sin cambiar su función frente a grupo",
+      "Incrementar las horas de trabajo del docente en el aula",
+    ],
+    correcta: "Reconocer la trayectoria profesional del docente mejorando su nivel salarial sin cambiar su función frente a grupo",
+  },
+  {
+    categoria: "Promoción Horizontal",
+    pregunta: "¿Cuántos niveles contempla la Promoción Horizontal para docentes de educación básica según la LGSCMM?",
+    opciones: ["3 niveles", "5 niveles", "7 niveles"],
+    correcta: "5 niveles",
+  },
+  {
+    categoria: "Promoción Horizontal",
+    pregunta: "¿Qué instancia coordina el proceso de Promoción Horizontal a nivel nacional?",
+    opciones: [
+      "La Secretaría de Educación Pública directamente",
+      "El sindicato nacional de trabajadores de la educación",
+      "La Unidad del Sistema para la Carrera de las Maestras y los Maestros (USICAMM)",
+    ],
+    correcta: "La Unidad del Sistema para la Carrera de las Maestras y los Maestros (USICAMM)",
+  },
+  {
+    categoria: "Promoción Horizontal",
+    pregunta: "¿Cuál es el requisito mínimo de años de servicio frente a grupo para participar en la Promoción Horizontal?",
+    opciones: ["5 años de servicio docente", "10 años de servicio docente", "15 años de servicio docente"],
+    correcta: "5 años de servicio docente",
+  },
+  {
+    categoria: "Promoción Horizontal",
+    pregunta: "Un docente participó en la Promoción Horizontal el ciclo anterior pero no obtuvo el nivel. ¿Cuándo puede volver a participar?",
+    opciones: [
+      "Debe esperar 3 ciclos escolares antes de volver a participar",
+      "Puede participar en la siguiente convocatoria sin restricción de tiempo",
+      "Debe esperar 2 años antes de volver a intentarlo",
+    ],
+    correcta: "Puede participar en la siguiente convocatoria sin restricción de tiempo",
+  },
+  {
+    categoria: "Promoción Horizontal",
+    pregunta: "¿Cuál de los siguientes principios rige el proceso de Promoción Horizontal según la LGSCMM?",
+    opciones: [
+      "Antigüedad, sindicato y discrecionalidad",
+      "Mérito, legalidad, transparencia, imparcialidad y equidad",
+      "Productividad, competencia y resultados de examen único",
+    ],
+    correcta: "Mérito, legalidad, transparencia, imparcialidad y equidad",
+  },
+  {
+    categoria: "Promoción Horizontal",
+    pregunta: "¿Qué diferencia fundamental existe entre la Promoción Horizontal y la Promoción Vertical?",
+    opciones: [
+      "La horizontal cambia la función del docente a directivo; la vertical no implica cambio de función",
+      "La horizontal mejora el nivel salarial sin cambiar la función frente a grupo; la vertical implica acceder a funciones de dirección o supervisión",
+      "Ambas son iguales pero aplican a diferentes niveles educativos",
+    ],
+    correcta: "La horizontal mejora el nivel salarial sin cambiar la función frente a grupo; la vertical implica acceder a funciones de dirección o supervisión",
+  },
+  {
+    categoria: "Promoción Horizontal",
+    pregunta: "¿Cómo inicia obligatoriamente el trámite de Promoción Horizontal ante USICAMM?",
+    opciones: [
+      "Con una carta de recomendación firmada por el director de la escuela",
+      "Con el registro en la plataforma digital de USICAMM usando RFC y CURP vigentes",
+      "Con la autorización escrita del supervisor de zona escolar",
+    ],
+    correcta: "Con el registro en la plataforma digital de USICAMM usando RFC y CURP vigentes",
+  },
+  {
+    categoria: "Promoción Horizontal",
+    pregunta: "Un docente desea demostrar su práctica profesional en el expediente de Promoción Horizontal. ¿Qué evidencia es más adecuada?",
+    opciones: [
+      "Constancias de cursos ajenos a su función docente",
+      "Planeaciones didácticas, evaluaciones aplicadas y registros de seguimiento de aprendizajes",
+      "Reconocimientos deportivos obtenidos fuera de la escuela",
+    ],
+    correcta: "Planeaciones didácticas, evaluaciones aplicadas y registros de seguimiento de aprendizajes",
+  },
+  {
+    categoria: "Promoción Horizontal",
+    pregunta: "¿Qué función cumple la autoevaluación dentro del expediente de Promoción Horizontal?",
+    opciones: [
+      "Es un requisito opcional que no tiene peso en la valoración final",
+      "Permite al docente reflexionar críticamente sobre sus fortalezas y áreas de mejora profesional",
+      "Sustituye completamente a las evidencias de planeación didáctica",
+    ],
+    correcta: "Permite al docente reflexionar críticamente sobre sus fortalezas y áreas de mejora profesional",
+  },
+  {
+    categoria: "Promoción Horizontal",
+    pregunta: "¿A qué dimensión del expediente corresponde la participación del docente en el Consejo Técnico Escolar (CTE)?",
+    opciones: [
+      "Formación continua y desarrollo profesional",
+      "Participación en la comunidad escolar y trabajo colaborativo",
+      "Práctica pedagógica frente a grupo",
+    ],
+    correcta: "Participación en la comunidad escolar y trabajo colaborativo",
+  },
+  {
+    categoria: "Promoción Horizontal",
+    pregunta: "Una docente de preescolar incluye evidencias de trabajo con padres de familia en su expediente. ¿A qué dimensión corresponde?",
+    opciones: [
+      "Desarrollo profesional individual",
+      "Vinculación con la comunidad escolar",
+      "Práctica pedagógica frente a grupo",
+    ],
+    correcta: "Vinculación con la comunidad escolar",
+  },
+  {
+    categoria: "Promoción Horizontal",
+    pregunta: "¿Qué peso tiene la antigüedad docente en la valoración del expediente de Promoción Horizontal?",
+    opciones: [
+      "Es el único criterio que determina el resultado final",
+      "Es un requisito de elegibilidad pero no el único elemento; formación y práctica también tienen peso",
+      "La antigüedad no se considera en ningún momento del proceso",
+    ],
+    correcta: "Es un requisito de elegibilidad pero no el único elemento; formación y práctica también tienen peso",
+  },
+  {
+    categoria: "Promoción Horizontal",
+    pregunta: "Un maestro obtuvo el Nivel 1 hace tres años y desea avanzar al Nivel 2. ¿Qué debe presentar?",
+    opciones: [
+      "Exactamente las mismas evidencias del expediente anterior",
+      "Evidencias de desarrollo y práctica profesional acumuladas desde su última promoción",
+      "Únicamente constancias de cursos tomados en el último año",
+    ],
+    correcta: "Evidencias de desarrollo y práctica profesional acumuladas desde su última promoción",
+  },
+  {
+    categoria: "Promoción Horizontal",
+    pregunta: "¿Qué características debe tener un plan de mejora personal para ser válido en el expediente?",
+    opciones: [
+      "Debe ser genérico y aplicable a cualquier docente del sistema",
+      "Debe ser contextualizado, con metas específicas, acciones concretas y plazos definidos",
+      "Basta con mencionar que se desea mejorar la práctica docente en general",
+    ],
+    correcta: "Debe ser contextualizado, con metas específicas, acciones concretas y plazos definidos",
+  },
+  {
+    categoria: "Promoción Horizontal",
+    pregunta: "¿Cuándo se refleja el incremento salarial en el pago del docente promovido?",
+    opciones: [
+      "Inmediatamente después de conocer los resultados del proceso",
+      "A partir del inicio del siguiente ciclo escolar o según lo establezca la normativa presupuestal vigente",
+      "Tres años después de obtenida la promoción",
+    ],
+    correcta: "A partir del inicio del siguiente ciclo escolar o según lo establezca la normativa presupuestal vigente",
+  },
+  {
+    categoria: "Promoción Horizontal",
+    pregunta: "Un docente fue notificado de que su expediente no fue aprobado. ¿Puede impugnar este resultado?",
+    opciones: [
+      "No, los resultados de USICAMM son definitivos e inapelables",
+      "Sí, puede interponer un recurso de inconformidad ante la instancia señalada en la convocatoria dentro del plazo establecido",
+      "Solo puede impugnar si cuenta con el apoyo de su sindicato",
+    ],
+    correcta: "Sí, puede interponer un recurso de inconformidad ante la instancia señalada en la convocatoria dentro del plazo establecido",
+  },
+  {
+    categoria: "Promoción Horizontal",
+    pregunta: "¿Los docentes de educación especial pueden participar en la Promoción Horizontal?",
+    opciones: [
+      "No, el proceso es exclusivo para docentes de educación regular",
+      "Sí, pero los parámetros e indicadores se adaptan al perfil de educación especial",
+      "Sí, con exactamente los mismos criterios que los docentes de educación regular",
+    ],
+    correcta: "Sí, pero los parámetros e indicadores se adaptan al perfil de educación especial",
+  },
+  {
+    categoria: "Promoción Horizontal",
+    pregunta: "En el marco de la NEM, ¿cómo debe reflejarse la educación integral en las evidencias del docente?",
+    opciones: [
+      "Cubriendo todos los contenidos del libro de texto sin omitir ninguno",
+      "Atendiendo las dimensiones cognitiva, socioemocional, física y cultural de los alumnos",
+      "Aplicando exclusivamente estrategias de aprendizaje memorístico",
+    ],
+    correcta: "Atendiendo las dimensiones cognitiva, socioemocional, física y cultural de los alumnos",
+  },
+  {
+    categoria: "Promoción Horizontal",
+    pregunta: "¿Qué ocurre si USICAMM detecta que un docente no subió todas las evidencias requeridas?",
+    opciones: [
+      "El proceso continúa normalmente con las evidencias que subió",
+      "Se le notifica para que complete su expediente dentro del plazo establecido en la convocatoria",
+      "Es descalificado automáticamente sin posibilidad de corrección",
+    ],
+    correcta: "Se le notifica para que complete su expediente dentro del plazo establecido en la convocatoria",
+  },
+  {
+    categoria: "Promoción Horizontal",
+    pregunta: "Una docente de zona rural en escuela de organización incompleta desea participar. ¿Tiene alguna restricción?",
+    opciones: [
+      "No puede participar porque su escuela no cuenta con director de base",
+      "Participa en igualdad de condiciones que cualquier otro docente en servicio",
+      "Recibe puntaje adicional automático por trabajar en contexto de vulnerabilidad",
+    ],
+    correcta: "Participa en igualdad de condiciones que cualquier otro docente en servicio",
+  },
+  {
+    categoria: "Promoción Horizontal",
+    pregunta: "¿Qué se entiende por trayectoria profesional destacada en el contexto de la Promoción Horizontal?",
+    opciones: [
+      "Haber ocupado cargos directivos durante al menos 5 años",
+      "El conjunto de formación, práctica docente y participación comunitaria que evidencian compromiso sostenido con la mejora educativa",
+      "Tener el mayor número de reconocimientos sindicales en el centro de trabajo",
+    ],
+    correcta: "El conjunto de formación, práctica docente y participación comunitaria que evidencian compromiso sostenido con la mejora educativa",
+  },
+  {
+    categoria: "Promoción Horizontal",
+    pregunta: "¿Qué elemento corresponde a la dimensión de Desarrollo profesional en la Promoción Horizontal?",
+    opciones: [
+      "Antigüedad acumulada en el servicio docente",
+      "Participación en cursos de formación continua y actualización reconocidos por la autoridad educativa",
+      "Número de alumnos atendidos por ciclo escolar",
+    ],
+    correcta: "Participación en cursos de formación continua y actualización reconocidos por la autoridad educativa",
+  },
+  {
+    categoria: "Promoción Horizontal",
+    pregunta: "Un docente presenta una constancia de curso tomado hace 8 años. ¿Es válida esta evidencia?",
+    opciones: [
+      "Sí, cualquier curso sin importar su antigüedad es válido",
+      "Depende del periodo de vigencia de constancias que establezca la convocatoria vigente",
+      "No, solo son válidos los cursos del ciclo escolar en curso",
+    ],
+    correcta: "Depende del periodo de vigencia de constancias que establezca la convocatoria vigente",
+  },
+  {
+    categoria: "Promoción Horizontal",
+    pregunta: "Según la NEM, ¿qué evidencia demuestra mejor que el docente actúa como facilitador del aprendizaje?",
+    opciones: [
+      "Exámenes escritos con calificaciones altas aplicados al final de cada bimestre",
+      "Planeaciones donde el alumno construye su conocimiento de forma activa en situaciones contextualizadas",
+      "Registros de que el docente expuso el máximo contenido posible en cada sesión",
+    ],
+    correcta: "Planeaciones donde el alumno construye su conocimiento de forma activa en situaciones contextualizadas",
+  },
+];
+export default function ReactivosPdf() {
+  const pdfs = [
+    {
+      titulo: "Guia Promocion Horizontal",
+      desc: "10 reactivos tipo examen con respuestas y fundamento legal. Incluye resumen de requisitos, dimensiones del expediente y niveles de promocion.",
+      archivo: "/pdfs/guia_promocion_horizontal.pdf",
+      icono: "📈",
+      tag: "Nuevo",
+      tagColor: "#166534",
+    },
+    {
+      titulo: "Guia Nueva Escuela Mexicana",
+      desc: "10 reactivos sobre el Plan de Estudios 2022, ejes articuladores, campos formativos y rol del docente como facilitador.",
+      archivo: "/pdfs/guia_nueva_escuela_mexicana.pdf",
+      icono: "🏫",
+      tag: "Nuevo",
+      tagColor: "#166534",
+    },
+    {
+      titulo: "Guia Admision Docente",
+      desc: "10 reactivos sobre el proceso de admision, perfil del aspirante, planeacion didactica y evaluacion formativa.",
+      archivo: "/pdfs/guia_admision_docente.pdf",
+      icono: "🎓",
+      tag: "Nuevo",
+      tagColor: "#166534",
+    },
+    {
+      titulo: "Guia Derechos y Legislacion",
+      desc: "10 reactivos sobre el Articulo 3 Constitucional, LGSCMM, LGE, derechos del docente e inclusion educativa.",
+      archivo: "/pdfs/guia_derechos_legislacion.pdf",
+      icono: "⚖️",
+      tag: "Nuevo",
+      tagColor: "#166534",
+    },
+    {
+      titulo: "Reactivos USICAMM PDF",
+      desc: "Banco de reactivos tipo examen real para todos los procesos USICAMM 2026. Descarga e imprime para estudiar sin conexion.",
+      archivo: "/pdfs/reactivos.pdf",
+      icono: "📄",
+      tag: "Clasico",
+      tagColor: "#1e3a8a",
+    },
+  ];
+
+  return (
+    <div
+      style={{
+        fontFamily: "Arial, sans-serif",
+        backgroundColor: "#f0fdf4",
+        minHeight: "100vh",
+      }}
+    >
+      {/* ENCABEZADO */}
+      <div
+        style={{
+          background: "linear-gradient(135deg, #166534, #15803d)",
+          padding: "60px 40px",
+          textAlign: "center",
+          color: "white",
+        }}
+      >
+        <div
+          style={{
+            display: "inline-block",
+            background: "rgba(255,255,255,0.15)",
+            padding: "6px 16px",
+            borderRadius: "20px",
+            fontSize: "13px",
+            fontWeight: "600",
+            marginBottom: "16px",
+            border: "1px solid rgba(255,255,255,0.3)",
+          }}
+        >
+          Descarga gratuita para docentes
+        </div>
+        <h1
+          style={{
+            fontSize: "42px",
+            fontWeight: "800",
+            margin: "0 0 16px 0",
+          }}
+        >
+          Reactivos y Guias de Estudio PDF
+        </h1>
+        <p
+          style={{
+            fontSize: "18px",
+            opacity: 0.9,
+            maxWidth: "600px",
+            margin: "0 auto",
+            lineHeight: "1.6",
+          }}
+        >
+          Descarga gratis guias con reactivos tipo examen, respuestas y
+          fundamentos legales para tu proceso USICAMM 2026.
+        </p>
+      </div>
+
+      {/* TARJETAS */}
+      <div
+        style={{
+          maxWidth: "1100px",
+          margin: "0 auto",
+          padding: "50px 24px",
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+          gap: "24px",
+        }}
+      >
+        {pdfs.map((pdf) => (
+          <div
+            key={pdf.archivo}
+            style={{
+              backgroundColor: "white",
+              borderRadius: "20px",
+              padding: "28px",
+              boxShadow: "0 4px 20px rgba(0,0,0,0.07)",
+              border: "1px solid #dcfce7",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "space-between",
+            }}
+          >
+            <div>
+              {/* ICONO + TAG */}
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "flex-start",
+                  marginBottom: "12px",
+                }}
+              >
+                <span style={{ fontSize: "40px" }}>{pdf.icono}</span>
+                <span
+                  style={{
+                    backgroundColor: pdf.tagColor,
+                    color: "white",
+                    fontSize: "11px",
+                    fontWeight: "700",
+                    padding: "3px 10px",
+                    borderRadius: "20px",
+                  }}
+                >
+                  {pdf.tag}
+                </span>
+              </div>
+
+              {/* TITULO */}
+              <h3
+                style={{
+                  fontSize: "17px",
+                  fontWeight: "800",
+                  color: "#166534",
+                  margin: "0 0 10px 0",
+                }}
+              >
+                {pdf.titulo}
+              </h3>
+
+              {/* DESC */}
+              <p
+                style={{
+                  color: "#64748b",
+                  fontSize: "14px",
+                  lineHeight: "1.6",
+                  margin: "0 0 20px 0",
+                }}
+              >
+                {pdf.desc}
+              </p>
+            </div>
+
+            {/* BOTON */}
+            <a
+              href={pdf.archivo}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                backgroundColor: "#15803d",
+                color: "white",
+                padding: "13px 20px",
+                borderRadius: "12px",
+                textDecoration: "none",
+                fontWeight: "700",
+                fontSize: "15px",
+                textAlign: "center",
+                display: "block",
+                transition: "background 0.2s",
+              }}
+              onMouseEnter={(e) =>
+                (e.currentTarget.style.backgroundColor = "#166534")
+              }
+              onMouseLeave={(e) =>
+                (e.currentTarget.style.backgroundColor = "#15803d")
+              }
+            >
+              Descargar PDF gratis →
+            </a>
+          </div>
+        ))}
+      </div>
+
+      {/* FOOTER NOTE */}
+      <div
+        style={{
+          textAlign: "center",
+          padding: "0 20px 50px",
+          color: "#64748b",
+          fontSize: "14px",
+        }}
+      >
+        Todos los materiales son gratuitos y actualizados para USICAMM 2026 •{" "}
+        <span style={{ color: "#15803d", fontWeight: "600" }}>
+          promociondocente.mx
+        </span>
+      </div>
+    </div>
+  );
+}
 
 ];
