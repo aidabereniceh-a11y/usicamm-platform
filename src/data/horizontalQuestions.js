@@ -520,5 +520,3 @@ const horizontalQuestions = [
     correcta: "Planeaciones donde el alumno construye su conocimiento de forma activa en situaciones contextualizadas",
   },
 ]
-
-export default horizontalQuestions
