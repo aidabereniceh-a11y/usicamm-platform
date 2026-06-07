@@ -30,7 +30,9 @@ function Home() {
         <div style={{ fontSize: "20px", fontWeight: "800" }}>Promocion Docente MX</div>
         <div style={{ display: "flex", gap: "8px" }}>
           {[{ label: "Inicio", to: "/" }, { label: "Simulador", to: "/simulador-usicamm-2026" }, { label: "Horas", to: "/horas-adicionales" }, { label: "Admision", to: "/admision-docente-2026" }, { label: "PasaLista \u2728", to: "https://pasalista.mx" }].map((item) => (
-            <Link key={item.to} to={item.to} style={{ color: "white", textDecoration: "none", padding: "8px 16px", borderRadius: "8px", fontSize: "14px", fontWeight: "500" }}>{item.label}</Link>
+            item.to.startsWith("http") 
+              ? <a key={item.to} href={item.to} target="_blank" rel="noreferrer" style={{ color: "white", textDecoration: "none", padding: "8px 16px", borderRadius: "8px", fontSize: "14px", fontWeight: "600", background: "rgba(255,255,255,0.15)" }}>{item.label}</a>
+              : <Link key={item.to} to={item.to} style={{ color: "white", textDecoration: "none", padding: "8px 16px", borderRadius: "8px", fontSize: "14px", fontWeight: "500" }}>{item.label}</Link>
           ))}
         </div>
       </nav>
