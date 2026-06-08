@@ -1,7 +1,7 @@
 import OpenAI from 'openai'
 
 const openai = new OpenAI({
-  baseURL: 'https://openrouter.ai/api/v1',
+  baseURL: 'HTTP-Referer': 'https://promociondocente.mx',
 
   apiKey: import.meta.env.VITE_OPENROUTER_API_KEY,
 
