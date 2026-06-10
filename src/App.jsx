@@ -1,4 +1,4 @@
-﻿import { Link, Routes, Route } from "react-router-dom";
+import { Link, Routes, Route } from "react-router-dom";
 import HorasAdicionales from "./pages/HorasAdicionales";
 import SimuladorUsicamm2026 from "./pages/SimuladorUsicamm2026";
 import AdmisionDocente2026 from "./pages/AdmisionDocente2026";
@@ -26,6 +26,10 @@ const cards = [
 function Home() {
   return (
     <div style={{ fontFamily: "Arial, sans-serif", backgroundColor: "#f0fdf4", minHeight: "100vh" }}>
+      <div style={{ width: "100%", overflow: "hidden", lineHeight: 0 }}>
+        <img src="/preview.png" alt="Simulador USICAMM 2026" style={{ width: "100%", maxHeight: "300px", objectFit: "cover", objectPosition: "center top", display: "block" }} />
+      </div>
+
       <nav style={{ background: "linear-gradient(135deg, #166534, #15803d)", padding: "0 40px", color: "white", display: "flex", justifyContent: "space-between", alignItems: "center", height: "64px", boxShadow: "0 2px 12px rgba(0,0,0,0.15)", position: "sticky", top: 0, zIndex: 100 }}>
         <div style={{ fontSize: "20px", fontWeight: "800" }}>Promocion Docente MX</div>
         <div style={{ display: "flex", gap: "8px" }}>
