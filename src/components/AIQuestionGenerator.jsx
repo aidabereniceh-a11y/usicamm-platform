@@ -76,6 +76,7 @@ Formato EXACTO:
       "A": "",
       "B": "",
       "C": ""
+      "D": ""
     },
     "correct": "",
     "explanation": ""
