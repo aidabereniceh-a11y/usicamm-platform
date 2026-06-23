@@ -125,7 +125,7 @@ export default function ReactivosPdf() {
           doc.setFont('helvetica', 'normal')
           doc.setFontSize(10)
           if (question.options) {
-            Object.entries(question.options).forEach(([key, value]) => {
+            Object.entries(question.options).sort(([a], [b]) => a.localeCompare(b)).forEach(([key, value]) => {
               if (y > 260) { doc.addPage(); y = 20 }
               const optText = `   ${key}) ${value}`
               const splitOpt = doc.splitTextToSize(optText, maxWidth - 10)
