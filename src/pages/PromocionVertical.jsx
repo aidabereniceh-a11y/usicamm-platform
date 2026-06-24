@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 
+import { useEffect } from "react";
 export default function PromocionVertical() {
+  useEffect(() => { document.title = "Simulador Promocion Vertical USICAMM 2026 | Reactivos Gratis"; }, []);
 
   return (
 

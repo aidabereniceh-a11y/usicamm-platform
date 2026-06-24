@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 
+import { useEffect } from "react";
 export default function PromocionHorizontal() {
+  useEffect(() => { document.title = "Simulador Promocion Horizontal USICAMM 2026 | Reactivos Gratis"; }, []);
 
   return (
 

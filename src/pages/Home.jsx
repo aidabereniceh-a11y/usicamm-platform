@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 import AIQuestionGenerator from '../components/AIQuestionGenerator'
+import { useEffect } from 'react';
 export default function Home() {
+  useEffect(() => { document.title = 'Simulador USICAMM 2026 Gratis | Promocion Horizontal, Admision Docente y Mas'; }, []);
 
   return (
 
