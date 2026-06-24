@@ -1,18 +1,17 @@
-﻿// functions/api/generate.js
-const MAX_USES_PER_IP = 3
+﻿const MAX_USES_PER_IP = 3
 const KV_TTL = 60 * 60 * 24
 
 export async function onRequestPost(context) {
   const { request, env } = context
 
   const corsHeaders = {
-    'Access-Control-Allow-Origin': 'https://promociondocente.mx',
+    'Access-Control-Allow-Origin': '*',
     'Access-Control-Allow-Methods': 'POST, OPTIONS',
     'Access-Control-Allow-Headers': 'Content-Type',
   }
 
   const ip = request.headers.get('CF-Connecting-IP') || 'unknown'
-  const kvKey = uses_
+  const kvKey = 'uses_' + ip
 
   let currentUses = 0
   if (env.USES_KV) {
@@ -29,7 +28,7 @@ export async function onRequestPost(context) {
   const anthropicKey = env.ANTHROPIC_API_KEY
   if (!anthropicKey) {
     return new Response(
-      JSON.stringify({ error: 'config_error', message: 'Error de configuracion del servidor.' }),
+      JSON.stringify({ error: 'config_error', message: 'Error de configuracion: ' + JSON.stringify(Object.keys(env)) }),
       { status: 500, headers: { 'Content-Type': 'application/json', ...corsHeaders } }
     )
   }
@@ -48,7 +47,7 @@ export async function onRequestPost(context) {
         messages: [
           {
             role: 'user',
-            content: 'Genera SOLO un ARRAY JSON valido.\nNO expliques nada.\nNO uses markdown.\nNO uses `json.\nDebes generar EXACTAMENTE 5 preguntas tipo examen USICAMM.\n\nFormato EXACTO:\n[\n  {\n    "topic": "",\n    "question": "",\n    "options": {\n      "A": "",\n      "B": "",\n      "C": "",\n      "D": ""\n    },\n    "correct": "",\n    "explanation": ""\n  }\n]\n\nTemas:\n- Nueva Escuela Mexicana\n- Inclusion y diversidad\n- Evaluacion formativa\n- Casos practicos USICAMM\n- Articulo 3 Constitucional\n- Planeacion didactica\n- Aprendizaje situado\n- Promocion Horizontal\n- Derechos y legislacion docente',
+            content: 'Genera SOLO un ARRAY JSON valido.\nNO expliques nada.\nNO uses markdown.\nDebes generar EXACTAMENTE 5 preguntas tipo examen USICAMM.\n\nFormato EXACTO:\n[\n  {\n    "topic": "",\n    "question": "",\n    "options": {\n      "A": "",\n      "B": "",\n      "C": "",\n      "D": ""\n    },\n    "correct": "",\n    "explanation": ""\n  }\n]\n\nTemas:\n- Nueva Escuela Mexicana\n- Inclusion y diversidad\n- Evaluacion formativa\n- Articulo 3 Constitucional\n- Planeacion didactica\n- Promocion Horizontal\n- Derechos y legislacion docente',
           },
         ],
       }),
@@ -58,7 +57,7 @@ export async function onRequestPost(context) {
 
     if (!anthropicResponse.ok) {
       return new Response(
-        JSON.stringify({ error: 'api_error', message: 'Error al generar preguntas. Intenta de nuevo.' }),
+        JSON.stringify({ error: 'api_error', message: 'Error Anthropic: ' + JSON.stringify(data.error) }),
         { status: 502, headers: { 'Content-Type': 'application/json', ...corsHeaders } }
       )
     }
@@ -76,7 +75,7 @@ export async function onRequestPost(context) {
     )
   } catch (error) {
     return new Response(
-      JSON.stringify({ error: 'server_error', message: 'Error inesperado. Intenta de nuevo.' }),
+      JSON.stringify({ error: 'server_error', message: error.message }),
       { status: 500, headers: { 'Content-Type': 'application/json', ...corsHeaders } }
     )
   }
@@ -85,7 +84,7 @@ export async function onRequestPost(context) {
 export async function onRequestOptions() {
   return new Response(null, {
     headers: {
-      'Access-Control-Allow-Origin': 'https://promociondocente.mx',
+      'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Methods': 'POST, OPTIONS',
       'Access-Control-Allow-Headers': 'Content-Type',
     },
