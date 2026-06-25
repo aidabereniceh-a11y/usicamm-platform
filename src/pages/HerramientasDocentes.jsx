@@ -9,16 +9,16 @@ export default function HerramientasDocentes() {
       <div style={{ maxWidth: "900px", margin: "0 auto", padding: "60px 32px" }}>
 
         <div style={{ background: "white", borderRadius: "20px", padding: "32px", marginBottom: "24px", boxShadow: "0 4px 20px rgba(0,0,0,0.06)", border: "1px solid #bfdbfe" }}>
-          <h2 style={{ color: "#1e3a5f", fontSize: "24px", fontWeight: "700", marginBottom: "8px" }}>ðŸ› ï¸ Herramientas PDF</h2>
+          <h2 style={{ color: "#1e3a5f", fontSize: "24px", fontWeight: "700", marginBottom: "8px" }}>&#128295; Herramientas PDF</h2>
           <p style={{ color: "#475569", fontSize: "15px", marginBottom: "24px", lineHeight: 1.7 }}>
             Comprime, convierte y crea documentos PDF en segundos, especialmente pensadas para el trabajo docente diario.
           </p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "16px", marginBottom: "28px" }}>
             {[
-              { icono: "ðŸ“¦", titulo: "Compresor de PDF", desc: "Reduce el peso de tus planeaciones y documentos para enviarlos facil por WhatsApp." },
-              { icono: "ðŸ“„", titulo: "Generador de constancias", desc: "Crea constancias y reconocimientos para tus alumnos listos para imprimir." },
-              { icono: "âœ‚ï¸", titulo: "Dividir PDF", desc: "Extrae paginas especificas de cualquier documento PDF de forma rapida." },
-              { icono: "ðŸ”—", titulo: "Unir PDFs", desc: "Combina varios documentos en un solo PDF ordenado con un clic." },
+              { icono: "\u{1F4E6}", titulo: "Compresor de PDF", desc: "Reduce el peso de tus planeaciones y documentos para enviarlos facil por WhatsApp." },
+              { icono: "\u{1F4C4}", titulo: "Generador de constancias", desc: "Crea constancias y reconocimientos para tus alumnos listos para imprimir." },
+              { icono: "\u2702\uFE0F", titulo: "Dividir PDF", desc: "Extrae paginas especificas de cualquier documento PDF de forma rapida." },
+              { icono: "\u{1F517}", titulo: "Unir PDFs", desc: "Combina varios documentos en un solo PDF ordenado con un clic." },
             ].map((h) => (
               <div key={h.titulo} style={{ background: "#eff6ff", borderRadius: "14px", padding: "20px", borderLeft: "4px solid #1d4ed8" }}>
                 <div style={{ fontSize: "28px", marginBottom: "10px" }}>{h.icono}</div>
@@ -29,7 +29,7 @@ export default function HerramientasDocentes() {
           </div>
           <div style={{ textAlign: "center" }}>
             <span style={{ background: "#e0e7ff", color: "#3730a3", padding: "10px 24px", borderRadius: "10px", fontWeight: "700", fontSize: "14px", display: "inline-block" }}>
-              ðŸš§ Proximamente disponibles
+              &#128679; Proximamente disponibles
             </span>
           </div>
         </div>
