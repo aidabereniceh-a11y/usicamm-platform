@@ -1,24 +1,24 @@
-export default function NuevaEscuelaMexicana() {
+export default function HerramientasDocentes() {
   return (
     <div style={{ fontFamily: "Arial, sans-serif", backgroundColor: "#eff6ff", minHeight: "100vh" }}>
       <div style={{ background: "linear-gradient(135deg, #1e3a5f, #1d4ed8)", padding: "60px 32px", color: "white", textAlign: "center" }}>
-        <h1 style={{ fontSize: "42px", fontWeight: "800", margin: "0 0 16px 0" }}>Herramientas PDF para Docentes</h1>
+        <h1 style={{ fontSize: "42px", fontWeight: "800", margin: "0 0 16px 0" }}>Herramientas para Docentes</h1>
         <p style={{ fontSize: "18px", opacity: 0.9, maxWidth: "600px", margin: "0 auto" }}>Herramientas gratuitas disenadas para maestros mexicanos. Sin registro, sin instalacion, al instante.</p>
       </div>
 
       <div style={{ maxWidth: "900px", margin: "0 auto", padding: "60px 32px" }}>
 
         <div style={{ background: "white", borderRadius: "20px", padding: "32px", marginBottom: "24px", boxShadow: "0 4px 20px rgba(0,0,0,0.06)", border: "1px solid #bfdbfe" }}>
-          <h2 style={{ color: "#1e3a5f", fontSize: "24px", fontWeight: "700", marginBottom: "8px" }}>🛠️ Herramientas disponibles</h2>
+          <h2 style={{ color: "#1e3a5f", fontSize: "24px", fontWeight: "700", marginBottom: "8px" }}>ðŸ› ï¸ Herramientas PDF</h2>
           <p style={{ color: "#475569", fontSize: "15px", marginBottom: "24px", lineHeight: 1.7 }}>
             Comprime, convierte y crea documentos PDF en segundos, especialmente pensadas para el trabajo docente diario.
           </p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "16px", marginBottom: "28px" }}>
             {[
-              { icono: "📦", titulo: "Compresor de PDF", desc: "Reduce el peso de tus planeaciones y documentos para enviarlos facil por WhatsApp." },
-              { icono: "📄", titulo: "Generador de constancias", desc: "Crea constancias y reconocimientos para tus alumnos listos para imprimir." },
-              { icono: "✂️", titulo: "Dividir PDF", desc: "Extrae paginas especificas de cualquier documento PDF de forma rapida." },
-              { icono: "🔗", titulo: "Unir PDFs", desc: "Combina varios documentos en un solo PDF ordenado con un clic." },
+              { icono: "ðŸ“¦", titulo: "Compresor de PDF", desc: "Reduce el peso de tus planeaciones y documentos para enviarlos facil por WhatsApp." },
+              { icono: "ðŸ“„", titulo: "Generador de constancias", desc: "Crea constancias y reconocimientos para tus alumnos listos para imprimir." },
+              { icono: "âœ‚ï¸", titulo: "Dividir PDF", desc: "Extrae paginas especificas de cualquier documento PDF de forma rapida." },
+              { icono: "ðŸ”—", titulo: "Unir PDFs", desc: "Combina varios documentos en un solo PDF ordenado con un clic." },
             ].map((h) => (
               <div key={h.titulo} style={{ background: "#eff6ff", borderRadius: "14px", padding: "20px", borderLeft: "4px solid #1d4ed8" }}>
                 <div style={{ fontSize: "28px", marginBottom: "10px" }}>{h.icono}</div>
@@ -28,9 +28,9 @@ export default function NuevaEscuelaMexicana() {
             ))}
           </div>
           <div style={{ textAlign: "center" }}>
-            <a href="/herramientas-pdf" style={{ background: "linear-gradient(135deg, #1e3a5f, #1d4ed8)", color: "white", padding: "14px 36px", borderRadius: "12px", textDecoration: "none", fontWeight: "800", fontSize: "16px", display: "inline-block" }}>
-              Ver todas las herramientas →
-            </a>
+            <span style={{ background: "#e0e7ff", color: "#3730a3", padding: "10px 24px", borderRadius: "10px", fontWeight: "700", fontSize: "14px", display: "inline-block" }}>
+              ðŸš§ Proximamente disponibles
+            </span>
           </div>
         </div>
 

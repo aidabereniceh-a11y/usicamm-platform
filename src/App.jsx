@@ -7,7 +7,7 @@ import PromocionVertical from "./pages/PromocionVertical";
 import ReactivosPdf from "./pages/ReactivosPdf";
 import GuiaUsicamm2026 from "./pages/GuiaUsicamm2026";
 import PlaneacionesNem from "./pages/PlaneacionesNem";
-import NuevaEscuelaMexicana from "./pages/NuevaEscuelaMexicana";
+import HerramientasDocentes from "./pages/HerramientasDocentes";
 import EvaluacionDiagnostica from "./pages/EvaluacionDiagnostica";
 
 const cards = [
@@ -19,7 +19,7 @@ const cards = [
   { titulo: "Reactivos PDF", desc: "Descarga reactivos y materiales PDF gratuitos.", link: "/reactivos-usicamm-pdf", icono: "📄" },
   { titulo: "Guia USICAMM 2026", desc: "Guia completa para el proceso USICAMM 2026.", link: "/guia-usicamm-2026", icono: "📚" },
   { titulo: "Planeaciones NEM", desc: "Planeaciones para la Nueva Escuela Mexicana.", link: "/planeaciones-nem", icono: "🗂️" },
-  { titulo: "Nueva Escuela Mexicana", desc: "Recursos y materiales NEM para docentes.", link: "/nueva-escuela-mexicana", icono: "🏫" },
+  { titulo: "Herramientas Docentes", desc: "Comprime, divide y crea documentos PDF gratis.", link: "/herramientas-docentes", icono: "🛠️" },
   { titulo: "Evaluacion Diagnostica", desc: "Instrumentos y guias de evaluacion diagnostica.", link: "/evaluacion-diagnostica", icono: "✅" },
 ];
 
@@ -95,7 +95,7 @@ export default function App() {
       <Route path="/reactivos-usicamm-pdf" element={<ReactivosPdf />} />
       <Route path="/guia-usicamm-2026" element={<GuiaUsicamm2026 />} />
       <Route path="/planeaciones-nem" element={<PlaneacionesNem />} />
-      <Route path="/nueva-escuela-mexicana" element={<NuevaEscuelaMexicana />} />
+      <Route path="/herramientas-docentes" element={<HerramientasDocentes />} />
       <Route path="/evaluacion-diagnostica" element={<EvaluacionDiagnostica />} />
     </Routes>
   );
