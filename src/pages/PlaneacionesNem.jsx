@@ -99,9 +99,9 @@ export default function PlaneacionesNem() {
 
         <div style={{ background: "linear-gradient(135deg, #166534, #15803d)", borderRadius: "20px", padding: "32px", textAlign: "center", color: "white" }}>
           <h2 style={{ fontSize: "24px", fontWeight: "700", margin: "0 0 12px 0" }}>Prepara mejor tus clases</h2>
-          <p style={{ opacity: 0.9, marginBottom: "20px" }}>Accede a recursos y guias gratuitas para la Nueva Escuela Mexicana</p>
-          <a href="/nueva-escuela-mexicana" style={{ background: "white", color: "#15803d", padding: "14px 32px", borderRadius: "12px", textDecoration: "none", fontWeight: "800", fontSize: "16px", display: "inline-block" }}>
-            Ver mas recursos NEM
+          <p style={{ opacity: 0.9, marginBottom: "20px" }}>Practica gratis con reactivos tipo examen real para tu evaluacion USICAMM</p>
+          <a href="/simulador-usicamm-2026" style={{ background: "white", color: "#15803d", padding: "14px 32px", borderRadius: "12px", textDecoration: "none", fontWeight: "800", fontSize: "16px", display: "inline-block" }}>
+            Ir al Simulador USICAMM 2026
           </a>
         </div>
 
