@@ -1,4 +1,4 @@
-﻿import { Link, Routes, Route } from "react-router-dom";
+import { Link, Routes, Route } from "react-router-dom";
 import HorasAdicionales from "./pages/HorasAdicionales";
 import SimuladorUsicamm2026 from "./pages/SimuladorUsicamm2026";
 import AdmisionDocente2026 from "./pages/AdmisionDocente2026";
@@ -6,6 +6,9 @@ import PromocionHorizontal from "./pages/PromocionHorizontal";
 import PromocionVertical from "./pages/PromocionVertical";
 import ReactivosPdf from "./pages/ReactivosPdf";
 import GuiaUsicamm2026 from "./pages/GuiaUsicamm2026";
+import PaginaPago from "./pages/PaginaPago";
+import PagoExitoso from "./pages/PagoExitoso";
+import PagoFallido from "./pages/PagoFallido";
 import PlaneacionesNem from "./pages/PlaneacionesNem";
 import HerramientasDocentes from "./pages/HerramientasDocentes";
 import EvaluacionDiagnostica from "./pages/EvaluacionDiagnostica";
@@ -97,6 +100,9 @@ export default function App() {
       <Route path="/planeaciones-nem" element={<PlaneacionesNem />} />
       <Route path="/herramientas-docentes" element={<HerramientasDocentes />} />
       <Route path="/evaluacion-diagnostica" element={<EvaluacionDiagnostica />} />
+      <Route path="/comprar-planeaciones" element={<PaginaPago />} />
+      <Route path="/pago-exitoso" element={<PagoExitoso />} />
+      <Route path="/pago-fallido" element={<PagoFallido />} />
     </Routes>
   );
 }

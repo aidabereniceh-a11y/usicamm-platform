@@ -56,7 +56,7 @@ export default function PlaneacionesNem() {
             Descarga tus Planeaciones - Ciclo 2026-2027
           </h2>
           <p style={{ color: "#64748b", fontSize: "14px", marginBottom: "28px" }}>
-            Formato PDF · Plan de Estudios 2022 · Los 4 Campos Formativos · 4 semanas por mes · Completamente gratis
+            Agosto y Septiembre gratis · Octubre en adelante requiere compra · PDFs con marca de agua personalizada
           </p>
 
           {meses.map((mes) => (
