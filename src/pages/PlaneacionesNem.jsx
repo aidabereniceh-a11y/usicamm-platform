@@ -5,7 +5,11 @@ export default function PlaneacionesNem() {
   const meses = [
     { nombre: "Agosto",     subtitulo: "Induccion y Diagnostico",                 icono: "📅", gratis: true  },
     { nombre: "Septiembre", subtitulo: "Inicio de Proyectos Comunitarios",         icono: "📅", gratis: true  },
-    { nombre: "Octubre",    subtitulo: "Profundizacion del Proyecto Comunitario",  icono: "📅", gratis: false },
+    { nombre: "Octubre",    subtitulo: "Profundizacion del Proyecto Comunitario",   icono: "📅", gratis: false },
+    { nombre: "Noviembre",  subtitulo: "Evaluacion Sumativa del Primer Bimestre",   icono: "📅", gratis: false },
+    { nombre: "Diciembre",  subtitulo: "Cierre del Primer Semestre",                icono: "📅", gratis: false },
+    { nombre: "Enero",      subtitulo: "Reinicio del Segundo Semestre",             icono: "📅", gratis: false },
+    { nombre: "Febrero",    subtitulo: "Avance del Segundo Proyecto",               icono: "📅", gratis: false },
   ];
 
   const niveles = [
