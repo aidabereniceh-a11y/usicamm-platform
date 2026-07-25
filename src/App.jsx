@@ -41,7 +41,7 @@ function Home() {
       </nav>
 
       <section style={{ textAlign: "center", padding: "80px 20px", backgroundImage: "url('/preview.png')", backgroundSize: "cover", backgroundPosition: "center", color: "white", position: "relative", overflow: "hidden", minHeight: "400px", display: "flex", alignItems: "center", justifyContent: "center" }}>
-
+        <div style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, background: "rgba(22, 101, 52, 0.78)" }} />
         <div style={{ position: "relative", zIndex: 1, maxWidth: "800px", margin: "0 auto" }}>
           <div style={{ display: "inline-block", background: "rgba(255,255,255,0.15)", padding: "6px 16px", borderRadius: "20px", fontSize: "13px", fontWeight: "600", marginBottom: "20px", border: "1px solid rgba(255,255,255,0.3)" }}>Plataforma gratuita para docentes</div>
           <h1 style={{ fontSize: "56px", fontWeight: "800", margin: "0 0 20px 0", lineHeight: 1.1 }}>Plataforma USICAMM 2026</h1>
