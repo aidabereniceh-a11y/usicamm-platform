@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.promociondocente.mx/</loc>
@@ -11,6 +11,16 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://www.promociondocente.mx/promocion-horizontal-usicamm</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.promociondocente.mx/promocion-vertical-usicamm</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://www.promociondocente.mx/admision-docente-2026</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -18,15 +28,20 @@
   <url>
     <loc>https://www.promociondocente.mx/horas-adicionales</loc>
     <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.promociondocente.mx/planeaciones-nem</loc>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.promociondocente.mx/promocion-horizontal-usicamm</loc>
+    <loc>https://www.promociondocente.mx/herramientas-docentes</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.promociondocente.mx/promocion-vertical-usicamm</loc>
+    <loc>https://www.promociondocente.mx/evaluacion-diagnostica</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -41,17 +56,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.promociondocente.mx/planeaciones-nem</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.promociondocente.mx/nueva-escuela-mexicana</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.promociondocente.mx/evaluacion-diagnostica</loc>
+    <loc>https://www.promociondocente.mx/comprar-planeaciones</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
