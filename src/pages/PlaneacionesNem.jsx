@@ -5,16 +5,7 @@ export default function PlaneacionesNem() {
   const meses = [
     { nombre: "Agosto",     subtitulo: "Induccion y Diagnostico",                 icono: "📅", gratis: true  },
     { nombre: "Septiembre", subtitulo: "Inicio de Proyectos Comunitarios",         icono: "📅", gratis: true  },
-    { nombre: "Octubre",    subtitulo: "Profundizacion del Proyecto Comunitario",   icono: "📅", gratis: false },
-    { nombre: "Noviembre",  subtitulo: "Evaluacion Sumativa del Primer Bimestre",   icono: "📅", gratis: false },
-    { nombre: "Diciembre",  subtitulo: "Cierre del Primer Semestre",                icono: "📅", gratis: false },
-    { nombre: "Enero",      subtitulo: "Reinicio del Segundo Semestre",             icono: "📅", gratis: false },
-    { nombre: "Febrero",    subtitulo: "Avance del Segundo Proyecto",               icono: "📅", gratis: false },
-    { nombre: "Marzo",      subtitulo: "Avance del Tercer Bimestre",                icono: "📅", gratis: false },
-    { nombre: "Abril",      subtitulo: "Cierre del Segundo Proyecto",               icono: "📅", gratis: false },
-    { nombre: "Mayo",       subtitulo: "Cierre del Ciclo Escolar",                  icono: "📅", gratis: false },
-    { nombre: "Junio",      subtitulo: "Evaluacion Final y Clausura",               icono: "📅", gratis: false },
-    { nombre: "Julio",      subtitulo: "Fin del Ciclo Escolar 2026-2027",           icono: "📅", gratis: false },
+    { nombre: "Octubre",    subtitulo: "Profundizacion del Proyecto Comunitario",  icono: "📅", gratis: false },
   ];
 
   const niveles = [
