@@ -34,7 +34,7 @@ function DiagnosticoDocente() {
       const prompt = `Eres un experto en la Nueva Escuela Mexicana y en el Diagnostico Integral de la Escuela (SEP-Mejoredu). Genera un Diagnostico Docente NEM completo y profesional con base en estos datos:\n\nNIVEL: ${form.nivel}\nGRADO: ${form.grado}\nNUMERO DE ALUMNOS: ${form.alumnos || "No especificado"}\nCONTEXTO ESCOLAR: ${form.contexto || "No especificado"}\nAREAS A DIAGNOSTICAR: ${form.areas.length > 0 ? form.areas.join(", ") : "Todas las areas"}\nFORTALEZAS IDENTIFICADAS: ${form.fortalezas || "No especificadas"}\nRETOS IDENTIFICADOS: ${form.retos || "No especificados"}\n\nGenera el diagnostico con estas secciones:\n1. DATOS GENERALES DEL GRUPO\n2. SITUACION ACTUAL (analisis por cada area seleccionada)\n3. FORTALEZAS DEL GRUPO\n4. AREAS DE OPORTUNIDAD Y RETOS\n5. OBJETIVOS DEL PEMC SUGERIDOS\n6. ACCIONES PRIORITARIAS (minimo 3, concretas)\n7. INDICADORES DE SEGUIMIENTO\n\nUsa lenguaje profesional docente NEM. Se especifico y practico.`;
       const res = await fetch("https://api.anthropic.com/v1/messages", {
         method: "POST",
-        headers: { "Content-Type": "application/json", "x-api-key": import.meta.env.VITE_ANTHROPIC_KEY, "anthropic-version": "2023-06-01", "anthropic-dangerous-direct-browser-access": "true" },
+        headers: { "Content-Type": "application/json", "x-api-key": import.meta.env.VITE_ANTHROPIC_API_KEY, "anthropic-version": "2023-06-01", "anthropic-dangerous-direct-browser-access": "true" },
         body: JSON.stringify({ model: "claude-sonnet-4-6", max_tokens: 1500, messages: [{ role: "user", content: prompt }] })
       });
       const data = await res.json();
@@ -239,7 +239,7 @@ function EvaluacionFormativa() {
       const prompt = `Eres un experto en evaluacion formativa de la Nueva Escuela Mexicana (NEM). Genera un instrumento de evaluacion formativa completo y listo para usar:\n\nNIVEL: ${form.nivel}\nGRADO: ${form.grado}\nCAMPO FORMATIVO: ${form.campo}\nPDA / CONTENIDO: ${form.pda || "General del campo formativo"}\nINSTRUMENTO: ${form.instrumento}\nCONTEXTO: ${form.contexto || "Aula regular"}\n\nPrincipios NEM: valorar el logro integral, retroalimentacion para mejorar, estudiante activo (autoevaluacion, coevaluacion, metacognicion), docente que guia y fomenta autonomia.\n\nGenera el instrumento COMPLETO con:\n1. ENCABEZADO (nombre, nivel, grado, campo, fecha)\n2. PROPOSITO DE LA EVALUACION\n3. EL INSTRUMENTO COMPLETO (tabla con criterios, niveles y descriptores especificos)\n4. ESPACIO PARA OBSERVACIONES\n5. PREGUNTAS DE METACOGNICION PARA EL ALUMNO (3 preguntas)\n6. NOTA PARA EL DOCENTE (como usarlo)\n\nSe muy especifico en criterios y descriptores. Lenguaje profesional docente NEM.`;
       const res = await fetch("https://api.anthropic.com/v1/messages", {
         method: "POST",
-        headers: { "Content-Type": "application/json", "x-api-key": import.meta.env.VITE_ANTHROPIC_KEY, "anthropic-version": "2023-06-01", "anthropic-dangerous-direct-browser-access": "true" },
+        headers: { "Content-Type": "application/json", "x-api-key": import.meta.env.VITE_ANTHROPIC_API_KEY, "anthropic-version": "2023-06-01", "anthropic-dangerous-direct-browser-access": "true" },
         body: JSON.stringify({ model: "claude-sonnet-4-6", max_tokens: 1500, messages: [{ role: "user", content: prompt }] })
       });
       const data = await res.json();
