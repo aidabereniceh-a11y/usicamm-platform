@@ -66,7 +66,7 @@ function CompresorPDF() {
 
   return (
     <div style={{ background: "white", borderRadius: "20px", padding: "32px", marginBottom: "24px", boxShadow: "0 4px 20px rgba(0,0,0,0.06)", border: "1px solid #bfdbfe" }}>
-      <h2 style={{ color: "#1e3a5f", fontSize: "24px", fontWeight: "700", marginBottom: "8px" }}>📦 Compresor de PDF</h2>
+      <h2 style={{ color: "#1e3a5f", fontSize: "24px", fontWeight: "700", marginBottom: "8px" }}>ðŸ“¦ Compresor de PDF</h2>
       <p style={{ color: "#475569", fontSize: "15px", marginBottom: "24px", lineHeight: 1.7 }}>
         Reduce el peso de tus planeaciones y documentos para enviarlos facil por WhatsApp o correo. Sin limite de paginas, sin registro.
       </p>
@@ -80,7 +80,7 @@ function CompresorPDF() {
             onDrop={(e) => { e.preventDefault(); const f = e.dataTransfer.files[0]; if (f) { setArchivo(f); setError(""); setResultado(null); } }}
             style={{ border: "2px dashed #93c5fd", borderRadius: "16px", padding: "40px 20px", textAlign: "center", cursor: "pointer", background: archivo ? "#eff6ff" : "#f8faff", transition: "all 0.2s" }}
           >
-            <div style={{ fontSize: "48px", marginBottom: "12px" }}>📄</div>
+            <div style={{ fontSize: "48px", marginBottom: "12px" }}>ðŸ“„</div>
             {archivo ? (
               <div>
                 <div style={{ color: "#1e3a5f", fontWeight: "700", fontSize: "16px", marginBottom: "4px" }}>{archivo.name}</div>
@@ -126,18 +126,18 @@ function CompresorPDF() {
         <div>
           <div style={{ background: resultado.reduccion > 0 ? "#f0fdf4" : "#eff6ff", borderRadius: "16px", padding: "24px", marginBottom: "16px", border: `1px solid ${resultado.reduccion > 0 ? "#bbf7d0" : "#bfdbfe"}` }}>
             <div style={{ textAlign: "center", marginBottom: "20px" }}>
-              <div style={{ fontSize: "48px", marginBottom: "8px" }}>{resultado.reduccion > 0 ? "🎉" : "✅"}</div>
+              <div style={{ fontSize: "48px", marginBottom: "8px" }}>{resultado.reduccion > 0 ? "ðŸŽ‰" : "âœ…"}</div>
               <div style={{ color: resultado.reduccion > 0 ? "#166534" : "#1e3a5f", fontWeight: "800", fontSize: "20px" }}>
                 {resultado.reduccion > 0 ? `PDF comprimido ${resultado.reduccion}%` : "PDF procesado correctamente"}
               </div>
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px", marginBottom: "20px" }}>
               <div style={{ background: "white", borderRadius: "12px", padding: "16px", textAlign: "center" }}>
-                <div style={{ color: "#94a3b8", fontSize: "12px", marginBottom: "4px" }}>Tamaño original</div>
+                <div style={{ color: "#94a3b8", fontSize: "12px", marginBottom: "4px" }}>TamaÃ±o original</div>
                 <div style={{ color: "#1e293b", fontWeight: "700", fontSize: "18px" }}>{formatBytes(resultado.tamanoOriginal)}</div>
               </div>
               <div style={{ background: "white", borderRadius: "12px", padding: "16px", textAlign: "center" }}>
-                <div style={{ color: "#94a3b8", fontSize: "12px", marginBottom: "4px" }}>Tamaño final</div>
+                <div style={{ color: "#94a3b8", fontSize: "12px", marginBottom: "4px" }}>TamaÃ±o final</div>
                 <div style={{ color: resultado.reduccion > 0 ? "#166534" : "#1e3a5f", fontWeight: "700", fontSize: "18px" }}>{formatBytes(resultado.tamanoFinal)}</div>
               </div>
             </div>
@@ -146,7 +146,7 @@ function CompresorPDF() {
               download={resultado.nombre}
               style={{ display: "block", background: "linear-gradient(135deg, #166534, #15803d)", color: "white", padding: "14px", borderRadius: "12px", textDecoration: "none", fontWeight: "800", fontSize: "16px", textAlign: "center" }}
             >
-              ⬇️ Descargar PDF comprimido
+              â¬‡ï¸ Descargar PDF comprimido
             </a>
           </div>
           <button
@@ -178,15 +178,15 @@ export default function HerramientasDocentes() {
 
         {/* Proximas herramientas */}
         <div style={{ background: "white", borderRadius: "20px", padding: "32px", marginBottom: "24px", boxShadow: "0 4px 20px rgba(0,0,0,0.06)", border: "1px solid #bfdbfe" }}>
-          <h2 style={{ color: "#1e3a5f", fontSize: "24px", fontWeight: "700", marginBottom: "8px" }}>🔜 Proximamente</h2>
+          <h2 style={{ color: "#1e3a5f", fontSize: "24px", fontWeight: "700", marginBottom: "8px" }}>ðŸ”œ Proximamente</h2>
           <p style={{ color: "#475569", fontSize: "15px", marginBottom: "24px", lineHeight: 1.7 }}>
             Mas herramientas en desarrollo para facilitar tu trabajo docente.
           </p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "16px", marginBottom: "16px" }}>
             {[
-              { icono: "📄", titulo: "Generador de constancias", desc: "Crea constancias y reconocimientos para tus alumnos listos para imprimir." },
-              { icono: "✂️", titulo: "Dividir PDF", desc: "Extrae paginas especificas de cualquier documento PDF de forma rapida." },
-              { icono: "🔗", titulo: "Unir PDFs", desc: "Combina varios documentos en un solo PDF ordenado con un clic." },
+              { icono: "ðŸ“„", titulo: "Generador de constancias", desc: "Crea constancias y reconocimientos para tus alumnos listos para imprimir." },
+              { icono: "âœ‚ï¸", titulo: "Dividir PDF", desc: "Extrae paginas especificas de cualquier documento PDF de forma rapida." },
+              { icono: "ðŸ”—", titulo: "Unir PDFs", desc: "Combina varios documentos en un solo PDF ordenado con un clic." },
             ].map((h) => (
               <div key={h.titulo} style={{ background: "#eff6ff", borderRadius: "14px", padding: "20px", borderLeft: "4px solid #93c5fd", opacity: 0.7 }}>
                 <div style={{ fontSize: "28px", marginBottom: "10px" }}>{h.icono}</div>
@@ -197,7 +197,7 @@ export default function HerramientasDocentes() {
           </div>
           <div style={{ textAlign: "center" }}>
             <span style={{ background: "#e0e7ff", color: "#3730a3", padding: "10px 24px", borderRadius: "10px", fontWeight: "700", fontSize: "14px", display: "inline-block" }}>
-              🚧 En desarrollo
+              ðŸš§ En desarrollo
             </span>
           </div>
         </div>
