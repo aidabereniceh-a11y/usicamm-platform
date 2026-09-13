@@ -494,7 +494,45 @@ function EvaluacionFormativa() {
     </div>
   );
 }
+function EvaluacionDiagnosticaInfo() {
+  return (
+    <div>
+      <div style={{ background: `linear-gradient(135deg, ${VD}, ${VM})`, borderRadius: "12px", padding: "20px 24px", marginBottom: "4px", color: "white" }}>
+        <div style={{ fontWeight: "800", fontSize: "18px" }}>Evaluacion Diagnostica NEM</div>
+        <div style={{ fontSize: "13px", opacity: 0.85, marginTop: "4px" }}>Guia y momentos clave de la evaluacion diagnostica inicial</div>
+      </div>
 
+      <SeccionHeader titulo="Que es la Evaluacion Diagnostica" color={VD} bg="#f0fdf4" />
+      <div style={{ background: "white", borderRadius: "10px", padding: "14px 16px", border: "1px solid #dcfce7", color: "#374151", fontSize: "13px", lineHeight: 1.6 }}>
+        Es el punto de partida del ciclo escolar: permite identificar el nivel de aprendizaje, las condiciones socioemocionales y el contexto de cada alumno antes de planificar. Se aplica durante las primeras 2-3 semanas del ciclo.
+      </div>
+
+      <SeccionHeader titulo="Momentos Sugeridos" color={VD} bg="#f0fdf4" />
+      <div style={{ background: "white", borderRadius: "10px", padding: "14px 16px", border: "1px solid #dcfce7" }}>
+        {[
+          "Semana 1: Observacion directa y actividades de integracion grupal.",
+          "Semana 2: Aplicacion de instrumentos (produccion escrita, resolucion de problemas, dialogo).",
+          "Semana 3: Analisis de resultados y elaboracion del diagnostico grupal para el PEMC.",
+        ].map((t, i) => <NumItem key={i} num={i + 1} text={t} color={VD} />)}
+      </div>
+
+      <SeccionHeader titulo="Instrumentos Recomendados" color={VD} bg="#f0fdf4" />
+      <div style={{ background: "white", borderRadius: "10px", padding: "14px 16px", border: "1px solid #dcfce7" }}>
+        {[
+          "Registro anecdotico de observacion.",
+          "Produccion escrita libre o guiada.",
+          "Entrevista informal con el alumno y/o la familia.",
+          "Ficha de contexto socioeconomico y familiar.",
+        ].map((t, i) => <BulletItem key={i} text={t} color={VD} />)}
+      </div>
+
+      <div style={{ background: "#f8fafc", borderRadius: "10px", padding: "12px 16px", marginTop: "12px", border: "1px solid #e2e8f0" }}>
+        <div style={{ color: "#64748b", fontSize: "11px", fontWeight: "700", marginBottom: "4px" }}>REFERENTE NORMATIVO</div>
+        <div style={{ color: "#94a3b8", fontSize: "11px" }}>Mejoredu (2022). Modelo de evaluacion diagnostica, formativa e integral.</div>
+      </div>
+    </div>
+  );
+}
 // â”€â”€â”€ PAGINA PRINCIPAL â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 export default function HerramientasDocentes() {
   const [activa, setActiva] = useState(null);
