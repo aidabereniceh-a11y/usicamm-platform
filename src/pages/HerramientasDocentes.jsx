@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const AZ="#1e3a5f",AZM="#1d4ed8",VD="#166534",VM="#15803d",MO="#7e22ce",ML="#faf5ff";
 
-// â”€â”€â”€ COMPONENTES DE FORMATO â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─── COMPONENTES DE FORMATO ─────────────────────────────────────────────────
 function SeccionHeader({ titulo, color="#1e3a5f", bg="#eff6ff" }) {
   return (
     <div style={{ background: bg, borderLeft: `5px solid ${color}`, padding: "10px 16px", marginTop: "20px", marginBottom: "10px", borderRadius: "0 8px 8px 0" }}>
@@ -15,7 +15,7 @@ function InfoRow({ label, value }) {
   return (
     <div style={{ display: "flex", borderBottom: "1px solid #f1f5f9", padding: "8px 0" }}>
       <div style={{ color: "#64748b", fontSize: "13px", fontWeight: "700", minWidth: "160px" }}>{label}</div>
-      <div style={{ color: "#1e293b", fontSize: "13px", flex: 1 }}>{value || "â€”"}</div>
+      <div style={{ color: "#1e293b", fontSize: "13px", flex: 1 }}>{value || "—"}</div>
     </div>
   );
 }
@@ -23,7 +23,7 @@ function InfoRow({ label, value }) {
 function BulletItem({ text, color="#166534" }) {
   return (
     <div style={{ display: "flex", gap: "8px", marginBottom: "6px", alignItems: "flex-start" }}>
-      <span style={{ color, fontWeight: "800", fontSize: "16px", lineHeight: "1.4", flexShrink: 0 }}>â€¢</span>
+      <span style={{ color, fontWeight: "800", fontSize: "16px", lineHeight: "1.4", flexShrink: 0 }}>•</span>
       <span style={{ color: "#374151", fontSize: "13px", lineHeight: 1.6 }}>{text}</span>
     </div>
   );
@@ -38,7 +38,7 @@ function NumItem({ num, text, color="#1e3a5f" }) {
   );
 }
 
-// â”€â”€â”€ DIAGNOSTICO DOCENTE NEM â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─── DIAGNOSTICO DOCENTE NEM ─────────────────────────────────────────────────
 const AREA_TEXTOS = {
   "Asistencia y comunicacion con familias": "Se identifican areas de oportunidad en la comunicacion con familias. Se recomienda implementar canales efectivos (grupo de WhatsApp, agenda escolar, reuniones bimestrales) y llevar registro sistematico de asistencia para detectar patrones y actuar oportunamente.",
   "Resultados de la valoracion diagnostica": "Los resultados de la valoracion diagnostica muestran diversidad en los niveles de aprendizaje. Es prioritario identificar los contenidos de mayor reto y disenar un Plan de Atencion diferenciado que fortalezca los aprendizajes fundamentales de cada alumno.",
@@ -75,18 +75,16 @@ function DiagnosticoOutput({ form }) {
     `Porcentaje de familias que participan en reuniones bimestrales de informacion.`,
   ];
 
-  const texto = `DIAGNOSTICO DOCENTE NEM - ${form.nivel} ${form.grado}\nFecha: ${fecha}\n\n1. DATOS GENERALES\nNivel: ${form.nivel} | Grado: ${form.grado} | Alumnos: ${form.alumnos || "N/E"} | Contexto: ${form.contexto || "N/E"}\n\n2. SITUACION ACTUAL\n${areas.map((a, i) => `${i+1}. ${a}:\n${AREA_TEXTOS[a]}`).join("\n\n")}\n\n3. FORTALEZAS\n${fortalezas.map(f => `â€¢ ${f}`).join("\n")}\n\n4. RETOS\n${retos.map(r => `â€¢ ${r}`).join("\n")}\n\n5. OBJETIVOS PEMC\nObj 1: Mejorar los aprendizajes fundamentales mediante proyectos comunitarios y evaluacion formativa continua.\nObj 2: Fortalecer la participacion de familias como agentes activos del proceso educativo.\nObj 3: Implementar adecuaciones razonables para atender la diversidad del grupo.\n\n6. ACCIONES PRIORITARIAS\n${acciones.map((a, i) => `${i+1}. ${a}`).join("\n")}\n\n7. INDICADORES\n${indicadores.map((ind, i) => `${i+1}. ${ind}`).join("\n")}`;
+  const texto = `DIAGNOSTICO DOCENTE NEM - ${form.nivel} ${form.grado}\nFecha: ${fecha}\n\n1. DATOS GENERALES\nNivel: ${form.nivel} | Grado: ${form.grado} | Alumnos: ${form.alumnos || "N/E"} | Contexto: ${form.contexto || "N/E"}\n\n2. SITUACION ACTUAL\n${areas.map((a, i) => `${i+1}. ${a}:\n${AREA_TEXTOS[a]}`).join("\n\n")}\n\n3. FORTALEZAS\n${fortalezas.map(f => `• ${f}`).join("\n")}\n\n4. RETOS\n${retos.map(r => `• ${r}`).join("\n")}\n\n5. OBJETIVOS PEMC\nObj 1: Mejorar los aprendizajes fundamentales mediante proyectos comunitarios y evaluacion formativa continua.\nObj 2: Fortalecer la participacion de familias como agentes activos del proceso educativo.\nObj 3: Implementar adecuaciones razonables para atender la diversidad del grupo.\n\n6. ACCIONES PRIORITARIAS\n${acciones.map((a, i) => `${i+1}. ${a}`).join("\n")}\n\n7. INDICADORES\n${indicadores.map((ind, i) => `${i+1}. ${ind}`).join("\n")}`;
 
   return (
     <div>
-      {/* Encabezado */}
       <div style={{ background: `linear-gradient(135deg, ${AZ}, ${AZM})`, borderRadius: "12px", padding: "20px 24px", marginBottom: "4px", color: "white" }}>
         <div style={{ fontWeight: "800", fontSize: "18px" }}>Diagnostico Docente NEM</div>
-        <div style={{ fontSize: "13px", opacity: 0.85, marginTop: "4px" }}>Diagnostico Integral del Grupo â€” Plan de Estudios 2022</div>
+        <div style={{ fontSize: "13px", opacity: 0.85, marginTop: "4px" }}>Diagnostico Integral del Grupo — Plan de Estudios 2022</div>
         <div style={{ fontSize: "12px", opacity: 0.7, marginTop: "2px" }}>Fecha: {fecha}</div>
       </div>
 
-      {/* Seccion 1: Datos */}
       <SeccionHeader titulo="1. Datos Generales del Grupo" color={AZ} bg="#eff6ff" />
       <div style={{ background: "white", borderRadius: "10px", padding: "4px 16px", border: "1px solid #e2e8f0" }}>
         <InfoRow label="Nivel educativo" value={form.nivel} />
@@ -98,7 +96,6 @@ function DiagnosticoOutput({ form }) {
         <InfoRow label="Escuela" value="________________________________" />
       </div>
 
-      {/* Seccion 2: Situacion actual */}
       <SeccionHeader titulo="2. Situacion Actual del Grupo" color={AZ} bg="#eff6ff" />
       <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
         {areas.map((a, i) => (
@@ -109,7 +106,6 @@ function DiagnosticoOutput({ form }) {
         ))}
       </div>
 
-      {/* Secciones 3 y 4 */}
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px", marginTop: "4px" }}>
         <div>
           <SeccionHeader titulo="3. Fortalezas del Grupo" color={VD} bg="#f0fdf4" />
@@ -125,7 +121,6 @@ function DiagnosticoOutput({ form }) {
         </div>
       </div>
 
-      {/* Seccion 5: Objetivos PEMC */}
       <SeccionHeader titulo="5. Objetivos del PEMC Sugeridos" color={MO} bg={ML} />
       <div style={{ background: "white", borderRadius: "10px", padding: "14px 16px", border: "1px solid #e9d5ff" }}>
         {[
@@ -135,13 +130,11 @@ function DiagnosticoOutput({ form }) {
         ].map((o, i) => <NumItem key={i} num={i + 1} text={o} color={MO} />)}
       </div>
 
-      {/* Seccion 6: Acciones */}
       <SeccionHeader titulo="6. Acciones Prioritarias" color={AZ} bg="#eff6ff" />
       <div style={{ background: "white", borderRadius: "10px", padding: "14px 16px", border: "1px solid #e2e8f0" }}>
         {acciones.map((a, i) => <NumItem key={i} num={i + 1} text={a} color={AZM} />)}
       </div>
 
-      {/* Seccion 7: Indicadores */}
       <SeccionHeader titulo="7. Indicadores de Seguimiento" color={VD} bg="#f0fdf4" />
       <div style={{ background: "white", borderRadius: "10px", border: "1px solid #dcfce7", overflow: "hidden" }}>
         <div style={{ display: "grid", gridTemplateColumns: "1fr auto", background: VD, padding: "10px 16px" }}>
@@ -156,7 +149,6 @@ function DiagnosticoOutput({ form }) {
         ))}
       </div>
 
-      {/* Firmas */}
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px", marginTop: "16px" }}>
         {["Firma del docente", "Visto bueno del director"].map(f => (
           <div key={f} style={{ background: "white", borderRadius: "10px", padding: "16px", border: "1px solid #e2e8f0", textAlign: "center" }}>
@@ -166,13 +158,11 @@ function DiagnosticoOutput({ form }) {
         ))}
       </div>
 
-      {/* Referentes */}
       <div style={{ background: "#f8fafc", borderRadius: "10px", padding: "12px 16px", marginTop: "12px", border: "1px solid #e2e8f0" }}>
         <div style={{ color: "#64748b", fontSize: "11px", fontWeight: "700", marginBottom: "4px" }}>REFERENTES NORMATIVOS</div>
         <div style={{ color: "#94a3b8", fontSize: "11px" }}>SEP (2022). Plan de Estudio para la Educacion Preescolar, Primaria y Secundaria. / Mejoredu (2022). Modelo de evaluacion diagnostica, formativa e integral. / SEP. Orientaciones para elaborar el PEMC.</div>
       </div>
 
-      {/* Boton copiar */}
       <button onClick={() => navigator.clipboard.writeText(texto)} style={{ width: "100%", background: AZ, color: "white", border: "none", padding: "12px", borderRadius: "10px", cursor: "pointer", fontWeight: "700", fontSize: "14px", marginTop: "16px" }}>
         Copiar texto para pegar en Word
       </button>
@@ -206,7 +196,7 @@ function DiagnosticoDocente() {
         <div><label style={lbl}>Contexto escolar</label><select value={form.contexto} onChange={e => setForm(f => ({ ...f, contexto: e.target.value }))} style={inp}><option value="">Selecciona...</option><option>Urbano</option><option>Semiurbano</option><option>Rural</option><option>Indigena</option><option>Migrante</option></select></div>
       </div>
       <div style={{ marginBottom: "16px" }}>
-        <label style={lbl}>Areas a diagnosticar (opcional â€” si no seleccionas, se incluyen todas)</label>
+        <label style={lbl}>Areas a diagnosticar (opcional — si no seleccionas, se incluyen todas)</label>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "8px" }}>
           {areas.map(a => (
             <label key={a} style={{ display: "flex", alignItems: "center", gap: "8px", padding: "8px 12px", background: form.areas.includes(a) ? "#eff6ff" : "#f8faff", borderRadius: "8px", border: `1px solid ${form.areas.includes(a) ? "#93c5fd" : "#e2e8f0"}`, cursor: "pointer", fontSize: "13px", color: AZ }}>
@@ -225,7 +215,7 @@ function DiagnosticoDocente() {
   );
 }
 
-// â”€â”€â”€ TEST ESTILOS DE APRENDIZAJE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─── TEST ESTILOS DE APRENDIZAJE ─────────────────────────────────────────────
 const PREGUNTAS = [
   { p: "Cuando aprendes algo nuevo, prefieres...", o: ["Ver diagramas, videos o imagenes", "Escuchar una explicacion oral", "Practicarlo con tus manos o moverte"] },
   { p: "Para recordar algo importante, tiendes a...", o: ["Escribirlo o hacer un esquema visual", "Repetirlo en voz alta o grabarlo", "Hacer algo fisico o moverlo"] },
@@ -312,7 +302,207 @@ function TestEstilosAprendizaje() {
   );
 }
 
-// â”€â”€â”€ EVALUACION FORMATIVA NEM â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─── EVALUACION DIAGNOSTICA NEM ──────────────────────────────────────────────
+const NIVELES_DIAG = [
+  { nombre: "Consolidado", color: "#166534", fondo: "#f0fdf4", desc: "Domina el aprendizaje esperado para su grado" },
+  { nombre: "En desarrollo", color: "#92400e", fondo: "#fffbeb", desc: "Muestra avances pero requiere reforzamiento" },
+  { nombre: "Nivel inicial", color: "#991b1b", fondo: "#fef2f2", desc: "Requiere apoyo intensivo desde el inicio del ciclo" },
+];
+
+const CRITERIOS_DIAGNOSTICO_CAMPO = {
+  "Lenguajes": ["Identifica letras, palabras o ideas principales segun su grado", "Se expresa oralmente y comparte ideas con claridad", "Muestra interes o habito por la lectura", "Produce textos acordes a su nivel (trazos, palabras u oraciones)"],
+  "Saberes y Pensamiento Cientifico": ["Reconoce numeros, cantidades o nociones matematicas basicas", "Resuelve problemas sencillos con estrategias propias", "Muestra curiosidad por fenomenos de su entorno", "Registra u organiza informacion de forma basica"],
+  "Etica, Naturaleza y Sociedades": ["Reconoce normas basicas de convivencia", "Identifica elementos de su entorno natural y social", "Muestra respeto por la diversidad de sus companeros", "Participa en actividades colectivas del aula"],
+  "De lo Humano y lo Comunitario": ["Expresa emociones basicas de forma adecuada a su edad", "Colabora con companeros en actividades grupales", "Muestra autonomia en actividades cotidianas del aula", "Sigue instrucciones sencillas con atencion"],
+};
+
+function EvaluacionDiagnosticaOutput({ form }) {
+  const fecha = new Date().toLocaleDateString("es-MX", { year: "numeric", month: "long", day: "numeric" });
+  const criterios = CRITERIOS_DIAGNOSTICO_CAMPO[form.campo] || CRITERIOS_DIAGNOSTICO_CAMPO["Lenguajes"];
+  const esRubrica = form.instrumento.includes("Rubrica");
+  const esLista = form.instrumento.includes("Lista");
+  const esEntrevista = form.instrumento.includes("Entrevista");
+
+  return (
+    <div>
+      <div style={{ background: `linear-gradient(135deg, ${VD}, ${VM})`, borderRadius: "12px", padding: "20px 24px", marginBottom: "4px", color: "white" }}>
+        <div style={{ fontWeight: "800", fontSize: "18px" }}>{form.instrumento}</div>
+        <div style={{ fontSize: "13px", opacity: 0.85, marginTop: "4px" }}>Evaluacion Diagnostica NEM — Inicio de Ciclo 2026-2027</div>
+        <div style={{ fontSize: "12px", opacity: 0.7, marginTop: "2px" }}>Fecha: {fecha}</div>
+      </div>
+
+      <SeccionHeader titulo="Encabezado" color={VD} bg="#f0fdf4" />
+      <div style={{ background: "white", borderRadius: "10px", padding: "4px 16px", border: "1px solid #dcfce7" }}>
+        <InfoRow label="Nivel" value={form.nivel} />
+        <InfoRow label="Grado" value={form.grado} />
+        <InfoRow label="Campo formativo" value={form.campo} />
+        <InfoRow label="Aprendizaje a diagnosticar" value={form.pda || "Aprendizajes esperados de entrada al grado"} />
+        <InfoRow label="Numero de alumnos" value={form.alumnos} />
+        <InfoRow label="Docente" value="________________________________" />
+        <InfoRow label="Alumno/a" value="________________________________" />
+      </div>
+
+      <SeccionHeader titulo="Proposito" color={VD} bg="#f0fdf4" />
+      <div style={{ background: "white", borderRadius: "10px", padding: "14px 16px", border: "1px solid #dcfce7", color: "#374151", fontSize: "13px", lineHeight: 1.6 }}>
+        Identificar el punto de partida de cada alumno en <strong>{form.campo}</strong> al inicio del ciclo escolar, para orientar la planificacion, detectar necesidades de apoyo y establecer las bases del Plan de Atencion y del PEMC.
+      </div>
+
+      <SeccionHeader titulo={esRubrica ? "Rubrica Diagnostica (3 Niveles)" : esLista ? "Lista de Cotejo Diagnostica" : esEntrevista ? "Guia de Entrevista / Cuestionario Oral" : "Instrumento Diagnostico"} color={VD} bg="#f0fdf4" />
+
+      {esRubrica && (
+        <div style={{ background: "white", borderRadius: "10px", border: "1px solid #dcfce7", overflow: "hidden" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr 1fr", background: VD }}>
+            {["Criterio a diagnosticar", ...NIVELES_DIAG.map(n => n.nombre)].map(h => (
+              <div key={h} style={{ color: "white", fontWeight: "700", fontSize: "12px", padding: "10px 12px", borderRight: "1px solid #15803d" }}>{h}</div>
+            ))}
+          </div>
+          {criterios.map((c, i) => (
+            <div key={i} style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr 1fr", background: i % 2 === 0 ? "white" : "#f0fdf4", borderBottom: "1px solid #dcfce7" }}>
+              <div style={{ color: "#374151", fontSize: "12px", padding: "10px 12px", fontWeight: "600", borderRight: "1px solid #dcfce7" }}>{c}</div>
+              {NIVELES_DIAG.map(n => (
+                <div key={n.nombre} style={{ color: n.color, fontSize: "11px", padding: "10px 12px", borderRight: "1px solid #dcfce7" }}>{n.desc}</div>
+              ))}
+            </div>
+          ))}
+        </div>
+      )}
+
+      {esLista && (
+        <div style={{ background: "white", borderRadius: "10px", border: "1px solid #dcfce7", overflow: "hidden" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "3fr 80px 80px 100px", background: VD }}>
+            {["Indicador diagnostico", "Si", "No", "Parcial"].map(h => (
+              <div key={h} style={{ color: "white", fontWeight: "700", fontSize: "12px", padding: "10px 12px", borderRight: "1px solid #15803d", textAlign: "center" }}>{h}</div>
+            ))}
+          </div>
+          {criterios.map((c, i) => (
+            <div key={i} style={{ display: "grid", gridTemplateColumns: "3fr 80px 80px 100px", background: i % 2 === 0 ? "white" : "#f0fdf4", borderBottom: "1px solid #dcfce7" }}>
+              <div style={{ color: "#374151", fontSize: "12px", padding: "10px 12px", fontWeight: "500" }}>{c}</div>
+              {["", "", ""].map((_, j) => <div key={j} style={{ padding: "10px", textAlign: "center", borderLeft: "1px solid #dcfce7", display: "flex", alignItems: "center", justifyContent: "center" }}><div style={{ width: "18px", height: "18px", border: "2px solid #86efac", borderRadius: "4px" }} /></div>)}
+            </div>
+          ))}
+        </div>
+      )}
+
+      {esEntrevista && (
+        <div style={{ background: "white", borderRadius: "10px", padding: "14px 16px", border: "1px solid #dcfce7" }}>
+          {[
+            `Cuentame, ¿que hiciste durante las vacaciones o el receso escolar?`,
+            `¿Que es lo que mas te gusta hacer en la escuela?`,
+            `¿Hay algo del grado anterior que sientas que aun te cuesta trabajo?`,
+            `¿Quien te apoya con la tarea o las actividades escolares en casa?`,
+            `¿Como te sientes al llegar a un grupo o grado nuevo?`,
+          ].map((q, i) => (
+            <div key={i} style={{ marginBottom: "14px" }}>
+              <div style={{ color: VD, fontWeight: "700", fontSize: "12px", marginBottom: "4px" }}>{i + 1}. {q}</div>
+              <div style={{ borderBottom: "1px solid #e2e8f0", paddingBottom: "8px" }}>&nbsp;</div>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {!esRubrica && !esLista && !esEntrevista && (
+        <div style={{ background: "white", borderRadius: "10px", border: "1px solid #dcfce7", overflow: "hidden" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "3fr 1fr 2fr", background: VD }}>
+            {["Indicador de entrada", "Nivel", "Observacion"].map(h => (
+              <div key={h} style={{ color: "white", fontWeight: "700", fontSize: "12px", padding: "10px 12px", borderRight: "1px solid #15803d" }}>{h}</div>
+            ))}
+          </div>
+          {criterios.map((c, i) => (
+            <div key={i} style={{ display: "grid", gridTemplateColumns: "3fr 1fr 2fr", background: i % 2 === 0 ? "white" : "#f0fdf4", borderBottom: "1px solid #dcfce7" }}>
+              <div style={{ color: "#374151", fontSize: "12px", padding: "10px 12px" }}>{c}</div>
+              <div style={{ padding: "10px 12px", borderLeft: "1px solid #dcfce7", textAlign: "center", color: "#94a3b8", fontSize: "13px" }}>___</div>
+              <div style={{ padding: "10px 12px", borderLeft: "1px solid #dcfce7", color: "#94a3b8", fontSize: "12px" }}>_______________________</div>
+            </div>
+          ))}
+        </div>
+      )}
+
+      <SeccionHeader titulo="Plan de Atencion Inicial" color={AZ} bg="#eff6ff" />
+      <div style={{ background: "white", borderRadius: "10px", padding: "14px 16px", border: "1px solid #e2e8f0" }}>
+        {[
+          "Alumnos en nivel Consolidado: proponer retos y actividades de profundizacion.",
+          "Alumnos en nivel En desarrollo: reforzar con practica guiada durante las primeras semanas.",
+          "Alumnos en nivel Inicial: disenar adecuaciones y dar seguimiento semanal documentado.",
+        ].map((t, i) => <NumItem key={i} num={i + 1} text={t} color={AZM} />)}
+      </div>
+
+      <div style={{ background: "#f8fafc", borderRadius: "10px", padding: "12px 16px", marginTop: "12px", border: "1px solid #e2e8f0" }}>
+        <div style={{ color: "#64748b", fontSize: "11px", fontWeight: "700", marginBottom: "4px" }}>REFERENTE NORMATIVO</div>
+        <div style={{ color: "#94a3b8", fontSize: "11px" }}>SEP (2022). Plan de Estudio 2022. / Mejoredu (2022). Modelo de evaluacion diagnostica, formativa e integral.</div>
+      </div>
+
+      <button onClick={() => window.print()} style={{ width: "100%", background: VD, color: "white", border: "none", padding: "12px", borderRadius: "10px", cursor: "pointer", fontWeight: "700", fontSize: "14px", marginTop: "16px" }}>
+        Imprimir / Guardar como PDF
+      </button>
+    </div>
+  );
+}
+
+function EvaluacionDiagnostica() {
+  const [form, setForm] = useState({ nivel: "", grado: "", campo: "", pda: "", instrumento: "", alumnos: "" });
+  const [mostrar, setMostrar] = useState(false);
+  const [error, setError] = useState("");
+  const campos = ["Lenguajes", "Saberes y Pensamiento Cientifico", "Etica, Naturaleza y Sociedades", "De lo Humano y lo Comunitario"];
+  const instrumentos = ["Prueba escrita diagnostica", "Entrevista o cuestionario oral", "Lista de cotejo diagnostica", "Rubrica diagnostica (3 niveles)"];
+  const generar = () => { if (!form.nivel || !form.grado || !form.campo || !form.instrumento) { setError("Completa los campos obligatorios."); return; } setError(""); setMostrar(true); };
+  const inp = { width: "100%", padding: "10px 14px", borderRadius: "10px", border: "1px solid #86efac", fontSize: "14px", color: VD, outline: "none", boxSizing: "border-box" };
+  const lbl = { display: "block", color: VD, fontWeight: "700", fontSize: "13px", marginBottom: "6px" };
+
+  if (mostrar) return (
+    <div>
+      <EvaluacionDiagnosticaOutput form={form} />
+      <button onClick={() => { setMostrar(false); setForm({ nivel: "", grado: "", campo: "", pda: "", instrumento: "", alumnos: "" }); }} style={{ width: "100%", background: "#f1f5f9", color: "#64748b", padding: "12px", borderRadius: "12px", border: "none", fontWeight: "600", cursor: "pointer", marginTop: "12px" }}>
+        Generar otro instrumento
+      </button>
+    </div>
+  );
+
+  return (
+    <div>
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px", marginBottom: "16px" }}>
+        <div><label style={lbl}>Nivel *</label><select value={form.nivel} onChange={e => setForm(f => ({ ...f, nivel: e.target.value }))} style={inp}><option value="">Selecciona...</option><option>Preescolar</option><option>Primaria</option><option>Secundaria</option></select></div>
+        <div><label style={lbl}>Grado *</label><select value={form.grado} onChange={e => setForm(f => ({ ...f, grado: e.target.value }))} style={inp}><option value="">Selecciona...</option>{["1", "2", "3", "4", "5", "6"].map(g => <option key={g}>{g} grado</option>)}</select></div>
+      </div>
+
+      <div style={{ marginBottom: "16px" }}>
+        <label style={lbl}>Campo formativo *</label>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "8px" }}>
+          {campos.map(c => (
+            <label key={c} style={{ display: "flex", alignItems: "center", gap: "8px", padding: "10px 12px", background: form.campo === c ? "#f0fdf4" : "white", borderRadius: "10px", border: `1px solid ${form.campo === c ? "#86efac" : "#e2e8f0"}`, cursor: "pointer", fontSize: "13px", color: VD }}>
+              <input type="radio" name="campoDiag" checked={form.campo === c} onChange={() => setForm(f => ({ ...f, campo: c }))} style={{ accentColor: VD }} />{c}
+            </label>
+          ))}
+        </div>
+      </div>
+
+      <div style={{ marginBottom: "16px" }}>
+        <label style={lbl}>Aprendizaje o habilidad especifica a diagnosticar (opcional)</label>
+        <textarea value={form.pda} onChange={e => setForm(f => ({ ...f, pda: e.target.value }))} placeholder="Ej: Lectura y escritura de numeros hasta 100, comprension lectora basica..." rows={2} style={{ ...inp, resize: "vertical" }} />
+      </div>
+
+      <div style={{ marginBottom: "16px" }}>
+        <label style={lbl}>Numero de alumnos (opcional)</label>
+        <input type="number" value={form.alumnos} onChange={e => setForm(f => ({ ...f, alumnos: e.target.value }))} placeholder="Ej: 28" style={inp} />
+      </div>
+
+      <div style={{ marginBottom: "20px" }}>
+        <label style={lbl}>Tipo de instrumento *</label>
+        <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+          {instrumentos.map(inst => (
+            <label key={inst} style={{ display: "flex", alignItems: "center", gap: "8px", padding: "10px 14px", background: form.instrumento === inst ? "#f0fdf4" : "white", borderRadius: "10px", border: `1px solid ${form.instrumento === inst ? "#86efac" : "#e2e8f0"}`, cursor: "pointer", fontSize: "13px", color: VD }}>
+              <input type="radio" name="instDiag" checked={form.instrumento === inst} onChange={() => setForm(f => ({ ...f, instrumento: inst }))} style={{ accentColor: VD }} />{inst}
+            </label>
+          ))}
+        </div>
+      </div>
+
+      {error && <div style={{ background: "#fef2f2", border: "1px solid #fecaca", borderRadius: "10px", padding: "12px 16px", marginBottom: "16px", color: "#dc2626", fontSize: "14px" }}>{error}</div>}
+      <button onClick={generar} style={{ width: "100%", background: `linear-gradient(135deg, ${VD}, ${VM})`, color: "white", padding: "14px", borderRadius: "12px", border: "none", fontWeight: "800", fontSize: "16px", cursor: "pointer" }}>Generar Evaluacion Diagnostica</button>
+    </div>
+  );
+}
+
+// ─── EVALUACION FORMATIVA NEM ────────────────────────────────────────────────
 const CRITERIOS_CAMPO = {
   "Lenguajes":["Produce textos con proposito comunicativo claro","Lee con comprension e identifica ideas principales","Participa en intercambios orales con vocabulario adecuado","Revisa y mejora sus producciones escritas","Usa el lenguaje para expresar ideas y argumentos"],
   "Saberes y Pensamiento Cientifico":["Resuelve situaciones problema con estrategias propias","Registra y analiza datos en tablas o graficas","Formula preguntas e hipotesis sobre su entorno","Aplica conceptos matematicos en contextos reales","Comunica sus hallazgos con claridad y evidencia"],
@@ -328,14 +518,12 @@ function EvaluacionOutput({ form }) {
 
   return (
     <div>
-      {/* Encabezado */}
       <div style={{ background: `linear-gradient(135deg, ${MO}, #6d28d9)`, borderRadius: "12px", padding: "20px 24px", marginBottom: "4px", color: "white" }}>
         <div style={{ fontWeight: "800", fontSize: "18px" }}>{form.instrumento}</div>
-        <div style={{ fontSize: "13px", opacity: 0.85, marginTop: "4px" }}>Evaluacion Formativa NEM â€” Plan de Estudios 2022</div>
+        <div style={{ fontSize: "13px", opacity: 0.85, marginTop: "4px" }}>Evaluacion Formativa NEM — Plan de Estudios 2022</div>
         <div style={{ fontSize: "12px", opacity: 0.7, marginTop: "2px" }}>Fecha: {fecha}</div>
       </div>
 
-      {/* Datos */}
       <SeccionHeader titulo="Encabezado" color={MO} bg={ML} />
       <div style={{ background: "white", borderRadius: "10px", padding: "4px 16px", border: "1px solid #e9d5ff" }}>
         <InfoRow label="Nivel" value={form.nivel} />
@@ -347,13 +535,11 @@ function EvaluacionOutput({ form }) {
         <InfoRow label="Alumno/a" value="________________________________" />
       </div>
 
-      {/* Proposito */}
       <SeccionHeader titulo="Proposito de la Evaluacion" color={MO} bg={ML} />
       <div style={{ background: "white", borderRadius: "10px", padding: "14px 16px", border: "1px solid #e9d5ff", color: "#374151", fontSize: "13px", lineHeight: 1.6 }}>
         Valorar el logro integral del alumno en <strong>{form.campo}</strong>, proporcionando informacion para retroalimentar el aprendizaje y ajustar la ensenanza de manera oportuna, de acuerdo con los principios de la evaluacion formativa NEM.
       </div>
 
-      {/* Instrumento */}
       <SeccionHeader titulo={esRubrica ? "Rubrica Formativa (3 Niveles)" : esLista ? "Lista de Cotejo" : "Instrumento de Evaluacion"} color={MO} bg={ML} />
 
       {esRubrica && (
@@ -407,7 +593,6 @@ function EvaluacionOutput({ form }) {
         </div>
       )}
 
-      {/* Observaciones */}
       <SeccionHeader titulo="Observaciones del Docente" color={MO} bg={ML} />
       <div style={{ background: "white", borderRadius: "10px", padding: "14px 16px", border: "1px solid #e9d5ff" }}>
         {["Fortalezas observadas:", "Ajustes para la siguiente sesion:", "Alumnos que requieren apoyo prioritario:"].map((l, i) => (
@@ -418,10 +603,9 @@ function EvaluacionOutput({ form }) {
         ))}
       </div>
 
-      {/* Metacognicion */}
       <SeccionHeader titulo="Preguntas de Metacognicion para el Alumno" color={VD} bg="#f0fdf4" />
       <div style={{ background: "white", borderRadius: "10px", padding: "14px 16px", border: "1px solid #dcfce7" }}>
-        {["?Que aprendi en esta actividad o proyecto?", "?Que parte me costo mas trabajo? ?Como lo resolvi?", "?Que cambiaria de mi trabajo si lo hiciera de nuevo?"].map((q, i) => (
+        {["¿Que aprendi en esta actividad o proyecto?", "¿Que parte me costo mas trabajo? ¿Como lo resolvi?", "¿Que cambiaria de mi trabajo si lo hiciera de nuevo?"].map((q, i) => (
           <div key={i} style={{ marginBottom: "14px" }}>
             <div style={{ color: VD, fontWeight: "700", fontSize: "12px", marginBottom: "4px" }}>{i + 1}. {q}</div>
             <div style={{ borderBottom: "1px solid #e2e8f0", paddingBottom: "8px" }}>&nbsp;</div>
@@ -429,7 +613,6 @@ function EvaluacionOutput({ form }) {
         ))}
       </div>
 
-      {/* Nota docente */}
       <div style={{ background: "#fef9c3", borderRadius: "10px", padding: "14px 16px", marginTop: "12px", border: "1px solid #fde047" }}>
         <div style={{ color: "#713f12", fontWeight: "700", fontSize: "12px", marginBottom: "6px" }}>NOTA PARA EL DOCENTE</div>
         <div style={{ color: "#92400e", fontSize: "12px", lineHeight: 1.6 }}>Este instrumento es formativo, no sumativo. Usalo para retroalimentar al alumno de forma especifica y oportuna, identificar quienes requieren apoyo adicional o adecuaciones, y planificar la siguiente sesion con base en los resultados observados. Comparte los avances con las familias en las reuniones bimestrales.</div>
@@ -494,52 +677,14 @@ function EvaluacionFormativa() {
     </div>
   );
 }
-function EvaluacionDiagnosticaInfo() {
-  return (
-    <div>
-      <div style={{ background: `linear-gradient(135deg, ${VD}, ${VM})`, borderRadius: "12px", padding: "20px 24px", marginBottom: "4px", color: "white" }}>
-        <div style={{ fontWeight: "800", fontSize: "18px" }}>Evaluacion Diagnostica NEM</div>
-        <div style={{ fontSize: "13px", opacity: 0.85, marginTop: "4px" }}>Guia y momentos clave de la evaluacion diagnostica inicial</div>
-      </div>
 
-      <SeccionHeader titulo="Que es la Evaluacion Diagnostica" color={VD} bg="#f0fdf4" />
-      <div style={{ background: "white", borderRadius: "10px", padding: "14px 16px", border: "1px solid #dcfce7", color: "#374151", fontSize: "13px", lineHeight: 1.6 }}>
-        Es el punto de partida del ciclo escolar: permite identificar el nivel de aprendizaje, las condiciones socioemocionales y el contexto de cada alumno antes de planificar. Se aplica durante las primeras 2-3 semanas del ciclo.
-      </div>
-
-      <SeccionHeader titulo="Momentos Sugeridos" color={VD} bg="#f0fdf4" />
-      <div style={{ background: "white", borderRadius: "10px", padding: "14px 16px", border: "1px solid #dcfce7" }}>
-        {[
-          "Semana 1: Observacion directa y actividades de integracion grupal.",
-          "Semana 2: Aplicacion de instrumentos (produccion escrita, resolucion de problemas, dialogo).",
-          "Semana 3: Analisis de resultados y elaboracion del diagnostico grupal para el PEMC.",
-        ].map((t, i) => <NumItem key={i} num={i + 1} text={t} color={VD} />)}
-      </div>
-
-      <SeccionHeader titulo="Instrumentos Recomendados" color={VD} bg="#f0fdf4" />
-      <div style={{ background: "white", borderRadius: "10px", padding: "14px 16px", border: "1px solid #dcfce7" }}>
-        {[
-          "Registro anecdotico de observacion.",
-          "Produccion escrita libre o guiada.",
-          "Entrevista informal con el alumno y/o la familia.",
-          "Ficha de contexto socioeconomico y familiar.",
-        ].map((t, i) => <BulletItem key={i} text={t} color={VD} />)}
-      </div>
-
-      <div style={{ background: "#f8fafc", borderRadius: "10px", padding: "12px 16px", marginTop: "12px", border: "1px solid #e2e8f0" }}>
-        <div style={{ color: "#64748b", fontSize: "11px", fontWeight: "700", marginBottom: "4px" }}>REFERENTE NORMATIVO</div>
-        <div style={{ color: "#94a3b8", fontSize: "11px" }}>Mejoredu (2022). Modelo de evaluacion diagnostica, formativa e integral.</div>
-      </div>
-    </div>
-  );
-}
-// â”€â”€â”€ PAGINA PRINCIPAL â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─── PAGINA PRINCIPAL ────────────────────────────────────────────────────────
 export default function HerramientasDocentes() {
   const [activa, setActiva] = useState(null);
   const herramientas = [
     { id: "diagnostico", titulo: "Diagnostico Docente NEM", desc: "Genera tu Diagnostico Integral del Grupo basado en el enfoque SEP-Mejoredu. Listo para el PEMC.", color: AZM, fondo: "#eff6ff", borde: "#93c5fd", comp: <DiagnosticoDocente /> },
     { id: "estilos", titulo: "Test: Estilos de Aprendizaje", desc: "Descubre tu estilo docente predominante (Visual, Auditivo o Kinestesico) y recibe estrategias NEM.", color: MO, fondo: ML, borde: "#c084fc", comp: <TestEstilosAprendizaje /> },
-    { id: "diagnostica", titulo: "Evaluacion Diagnostica NEM", desc: "Instrumentos y guias para aplicar evaluaciones diagnosticas en el aula conforme a la NEM.", color: VD, fondo: "#f0fdf4", borde: "#86efac", comp: <EvaluacionDiagnosticaInfo /> },
+    { id: "diagnostica", titulo: "Evaluacion Diagnostica NEM", desc: "Genera pruebas, listas de cotejo, rubricas o entrevistas diagnosticas para el inicio del ciclo.", color: VD, fondo: "#f0fdf4", borde: "#86efac", comp: <EvaluacionDiagnostica /> },
     { id: "evaluacion", titulo: "Evaluacion Formativa NEM", desc: "Genera rubricas, listas de cotejo y mas instrumentos de evaluacion formativa listos para usar.", color: VD, fondo: "#f0fdf4", borde: "#86efac", comp: <EvaluacionFormativa /> },
   ];
   return (
