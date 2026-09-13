@@ -11,19 +11,14 @@ import PagoExitoso from "./pages/PagoExitoso";
 import PagoFallido from "./pages/PagoFallido";
 import PlaneacionesNem from "./pages/PlaneacionesNem";
 import HerramientasDocentes from "./pages/HerramientasDocentes";
-import EvaluacionDiagnostica from "./pages/EvaluacionDiagnostica";
 
 const cards = [
-  { titulo: "Simulador USICAMM", desc: "Practica con reactivos tipo examen real.", link: "/simulador-usicamm-2026", icono: "📝" },
-  { titulo: "Admision Docente", desc: "Guias y estrategias para ingreso docente.", link: "/admision-docente-2026", icono: "🎓" },
-  { titulo: "Promocion Horizontal", desc: "Recursos para promocion horizontal USICAMM.", link: "/promocion-horizontal-usicamm", icono: "📈" },
-  { titulo: "Horas Adicionales", desc: "Estrategias y recursos para horas adicionales.", link: "/horas-adicionales", icono: "⏰" },
-  { titulo: "Promocion Vertical", desc: "Recursos y simuladores para promocion vertical.", link: "/promocion-vertical-usicamm", icono: "🚀" },
-  { titulo: "Reactivos PDF", desc: "Descarga reactivos y materiales PDF gratuitos.", link: "/reactivos-usicamm-pdf", icono: "📄" },
-  { titulo: "Guia USICAMM 2026", desc: "Guia completa para el proceso USICAMM 2026.", link: "/guia-usicamm-2026", icono: "📚" },
-  { titulo: "Planeaciones NEM", desc: "Planeaciones para la Nueva Escuela Mexicana.", link: "/planeaciones-nem", icono: "🗂️" },
-  { titulo: "Herramientas Docentes", desc: "Comprime, divide y crea documentos PDF gratis.", link: "/herramientas-docentes", icono: "🛠️" },
-  { titulo: "Evaluacion Diagnostica", desc: "Instrumentos y guias de evaluacion diagnostica.", link: "/evaluacion-diagnostica", icono: "✅" },
+  { titulo: "Simulador USICAMM", desc: "Practica con reactivos tipo examen real.", link: "/simulador-usicamm-2026", icono: "ðŸ“°" },
+  { titulo: "Promocion Vertical", desc: "Recursos y simuladores para promocion vertical.", link: "/promocion-vertical-usicamm", icono: "ðŸš€" },
+  { titulo: "Reactivos PDF", desc: "Descarga reactivos y materiales PDF gratuitos.", link: "/reactivos-usicamm-pdf", icono: "ðŸ“„" },
+  { titulo: "Guia USICAMM 2026", desc: "Guia completa para el proceso USICAMM 2026.", link: "/guia-usicamm-2026", icono: "ðŸ“š" },
+  { titulo: "Planeaciones NEM", desc: "Planeaciones para la Nueva Escuela Mexicana.", link: "/planeaciones-nem", icono: "ðŸ—‚ï¸" },
+  { titulo: "Herramientas Docentes", desc: "Diagnostico, evaluacion formativa, test de estilos y mas.", link: "/herramientas-docentes", icono: "ðŸ› ï¸" },
 ];
 
 function Home() {
@@ -32,7 +27,7 @@ function Home() {
       <nav style={{ background: "linear-gradient(135deg, #166534, #15803d)", padding: "0 40px", color: "white", display: "flex", justifyContent: "space-between", alignItems: "center", height: "64px", boxShadow: "0 2px 12px rgba(0,0,0,0.15)", position: "sticky", top: 0, zIndex: 100 }}>
         <div style={{ fontSize: "20px", fontWeight: "800" }}>Promocion Docente MX</div>
         <div style={{ display: "flex", gap: "8px" }}>
-          {[{ label: "Inicio", to: "/" }, { label: "Simulador", to: "/simulador-usicamm-2026" }, { label: "Horas", to: "/horas-adicionales" }, { label: "Admision", to: "/admision-docente-2026" }, { label: "PasaLista ✨", to: "https://pasalista.mx" }].map((item) => (
+          {[{ label: "Inicio", to: "/" }, { label: "Simulador", to: "/simulador-usicamm-2026" }, { label: "Horas", to: "/horas-adicionales" }, { label: "Admision", to: "/admision-docente-2026" }, { label: "PasaLista", to: "https://pasalista.mx" }].map((item) => (
             item.to.startsWith("http")
               ? <a key={item.to} href={item.to} target="_blank" rel="noreferrer" style={{ color: "white", textDecoration: "none", padding: "8px 16px", borderRadius: "8px", fontSize: "14px", fontWeight: "600", background: "rgba(255,255,255,0.15)" }}>{item.label}</a>
               : <Link key={item.to} to={item.to} style={{ color: "white", textDecoration: "none", padding: "8px 16px", borderRadius: "8px", fontSize: "14px", fontWeight: "500" }}>{item.label}</Link>
@@ -41,7 +36,7 @@ function Home() {
       </nav>
 
       <section style={{ textAlign: "center", padding: "80px 20px", backgroundImage: "url('/preview.png')", backgroundSize: "cover", backgroundPosition: "center", color: "white", position: "relative", overflow: "hidden", minHeight: "400px", display: "flex", alignItems: "center", justifyContent: "center" }}>
-        <div style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, background: "rgba(0, 0, 0, 0)" }} />
+        <div style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, background: "rgba(0,0,0,0)" }} />
         <div style={{ position: "relative", zIndex: 1, maxWidth: "800px", margin: "0 auto" }}>
           <div style={{ display: "inline-block", background: "rgba(255,255,255,0.15)", padding: "6px 16px", borderRadius: "20px", fontSize: "13px", fontWeight: "600", marginBottom: "20px", border: "1px solid rgba(255,255,255,0.3)" }}>Plataforma gratuita para docentes</div>
           <h1 style={{ fontSize: "56px", fontWeight: "800", margin: "0 0 20px 0", lineHeight: 1.1 }}>Plataforma USICAMM 2026</h1>
@@ -51,7 +46,7 @@ function Home() {
       </section>
 
       <section style={{ background: "#dcfce7", padding: "40px 20px" }}>
-        <div style={{ maxWidth: "900px", margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: "24px", textAlign: "center" }}>
+        <div style={{ maxWidth: "900px", margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px,1fr))", gap: "24px", textAlign: "center" }}>
           {[{ num: "10+", label: "Recursos gratuitos" }, { num: "100%", label: "Gratis para docentes" }, { num: "2026", label: "Actualizado" }].map((s) => (
             <div key={s.label}><div style={{ fontSize: "40px", fontWeight: "800", color: "#15803d" }}>{s.num}</div><div style={{ color: "#166534", fontSize: "15px", fontWeight: "500" }}>{s.label}</div></div>
           ))}
@@ -66,7 +61,7 @@ function Home() {
               <div style={{ fontSize: "36px", marginBottom: "12px" }}>{card.icono}</div>
               <h3 style={{ fontSize: "18px", fontWeight: "700", color: "#166534", margin: "0 0 8px 0" }}>{card.titulo}</h3>
               <p style={{ color: "#64748b", fontSize: "14px", lineHeight: 1.6, margin: "0 0 16px 0" }}>{card.desc}</p>
-              <Link to={card.link} style={{ color: "#15803d", textDecoration: "none", fontWeight: "600", fontSize: "14px" }}>Ver mas →</Link>
+              <Link to={card.link} style={{ color: "#15803d", textDecoration: "none", fontWeight: "600", fontSize: "14px" }}>Ver mas</Link>
             </div>
           ))}
         </div>
@@ -80,7 +75,7 @@ function Home() {
 
       <footer style={{ backgroundColor: "#052e16", color: "#86efac", padding: "32px", textAlign: "center", fontSize: "14px" }}>
         <div style={{ fontSize: "18px", fontWeight: "700", color: "white", marginBottom: "8px" }}>Promocion Docente MX</div>
-        <p style={{ margin: 0 }}>2026 Promocion Docente MX · Todos los derechos reservados</p>
+        <p style={{ margin: 0 }}>2026 Promocion Docente MX - Todos los derechos reservados</p>
       </footer>
     </div>
   );
@@ -99,7 +94,6 @@ export default function App() {
       <Route path="/guia-usicamm-2026" element={<GuiaUsicamm2026 />} />
       <Route path="/planeaciones-nem" element={<PlaneacionesNem />} />
       <Route path="/herramientas-docentes" element={<HerramientasDocentes />} />
-      <Route path="/evaluacion-diagnostica" element={<EvaluacionDiagnostica />} />
       <Route path="/comprar-planeaciones" element={<PaginaPago />} />
       <Route path="/pago-exitoso" element={<PagoExitoso />} />
       <Route path="/pago-fallido" element={<PagoFallido />} />

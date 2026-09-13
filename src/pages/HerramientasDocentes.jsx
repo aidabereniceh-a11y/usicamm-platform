@@ -501,6 +501,7 @@ export default function HerramientasDocentes() {
   const herramientas = [
     { id: "diagnostico", titulo: "Diagnostico Docente NEM", desc: "Genera tu Diagnostico Integral del Grupo basado en el enfoque SEP-Mejoredu. Listo para el PEMC.", color: AZM, fondo: "#eff6ff", borde: "#93c5fd", comp: <DiagnosticoDocente /> },
     { id: "estilos", titulo: "Test: Estilos de Aprendizaje", desc: "Descubre tu estilo docente predominante (Visual, Auditivo o Kinestesico) y recibe estrategias NEM.", color: MO, fondo: ML, borde: "#c084fc", comp: <TestEstilosAprendizaje /> },
+    { id: "diagnostica", titulo: "Evaluacion Diagnostica NEM", desc: "Instrumentos y guias para aplicar evaluaciones diagnosticas en el aula conforme a la NEM.", color: VD, fondo: "#f0fdf4", borde: "#86efac", comp: <EvaluacionDiagnosticaInfo /> },
     { id: "evaluacion", titulo: "Evaluacion Formativa NEM", desc: "Genera rubricas, listas de cotejo y mas instrumentos de evaluacion formativa listos para usar.", color: VD, fondo: "#f0fdf4", borde: "#86efac", comp: <EvaluacionFormativa /> },
   ];
   return (
