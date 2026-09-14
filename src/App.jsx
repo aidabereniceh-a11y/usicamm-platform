@@ -1,5 +1,4 @@
-import { Link, Routes, Route } from "react-router-dom";
-import { FileText, Rocket, FileDown, BookOpen, FolderOpen, Wrench } from "lucide-react";
+﻿import { Link, Routes, Route } from "react-router-dom";
 import HorasAdicionales from "./pages/HorasAdicionales";
 import SimuladorUsicamm2026 from "./pages/SimuladorUsicamm2026";
 import AdmisionDocente2026 from "./pages/AdmisionDocente2026";
@@ -14,12 +13,12 @@ import PlaneacionesNem from "./pages/PlaneacionesNem";
 import HerramientasDocentes from "./pages/HerramientasDocentes";
 
 const cards = [
-  { titulo: "Simulador USICAMM", desc: "Practica con reactivos tipo examen real.", link: "/simulador-usicamm-2026", Icono: FileText },
-  { titulo: "Promocion Vertical", desc: "Recursos y simuladores para promocion vertical.", link: "/promocion-vertical-usicamm", Icono: Rocket },
-  { titulo: "Reactivos PDF", desc: "Descarga reactivos y materiales PDF gratuitos.", link: "/reactivos-usicamm-pdf", Icono: FileDown },
-  { titulo: "Guia USICAMM 2026", desc: "Guia completa para el proceso USICAMM 2026.", link: "/guia-usicamm-2026", Icono: BookOpen },
-  { titulo: "Planeaciones NEM", desc: "Planeaciones para la Nueva Escuela Mexicana.", link: "/planeaciones-nem", Icono: FolderOpen },
-  { titulo: "Herramientas Docentes", desc: "Diagnostico, evaluacion formativa, test de estilos y mas.", link: "/herramientas-docentes", Icono: Wrench },
+  { titulo: "Simulador USICAMM", desc: "Practica con reactivos tipo examen real.", link: "/simulador-usicamm-2026", icono: "📰" },
+  { titulo: "Promocion Vertical", desc: "Recursos y simuladores para promocion vertical.", link: "/promocion-vertical-usicamm", icono: "🚀" },
+  { titulo: "Reactivos PDF", desc: "Descarga reactivos y materiales PDF gratuitos.", link: "/reactivos-usicamm-pdf", icono: "📄" },
+  { titulo: "Guia USICAMM 2026", desc: "Guia completa para el proceso USICAMM 2026.", link: "/guia-usicamm-2026", icono: "📚" },
+  { titulo: "Planeaciones NEM", desc: "Planeaciones para la Nueva Escuela Mexicana.", link: "/planeaciones-nem", icono: "🗂️" },
+  { titulo: "Herramientas Docentes", desc: "Diagnostico, evaluacion formativa, test de estilos y mas.", link: "/herramientas-docentes", icono: "🛠️" },
 ];
 
 function Home() {
@@ -59,7 +58,7 @@ function Home() {
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "24px" }}>
           {cards.map((card) => (
             <div key={card.link} style={{ backgroundColor: "white", padding: "28px", borderRadius: "20px", boxShadow: "0 4px 20px rgba(0,0,0,0.06)", border: "1px solid #dcfce7" }}>
-              <card.Icono size={36} color="#15803d" style={{ marginBottom: "12px" }} />
+              <div style={{ fontSize: "36px", marginBottom: "12px" }}>{card.icono}</div>
               <h3 style={{ fontSize: "18px", fontWeight: "700", color: "#166534", margin: "0 0 8px 0" }}>{card.titulo}</h3>
               <p style={{ color: "#64748b", fontSize: "14px", lineHeight: 1.6, margin: "0 0 16px 0" }}>{card.desc}</p>
               <Link to={card.link} style={{ color: "#15803d", textDecoration: "none", fontWeight: "600", fontSize: "14px" }}>Ver mas</Link>
