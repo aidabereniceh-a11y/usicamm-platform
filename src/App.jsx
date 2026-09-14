@@ -1,4 +1,4 @@
-﻿import { Link, Routes, Route } from "react-router-dom";
+import { Link, Routes, Route } from "react-router-dom";
 import { FileText, Rocket, FileDown, BookOpen, FolderOpen, Wrench } from "lucide-react";
 import HorasAdicionales from "./pages/HorasAdicionales";
 import SimuladorUsicamm2026 from "./pages/SimuladorUsicamm2026";
