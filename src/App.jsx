@@ -13,13 +13,13 @@ import PlaneacionesNem from "./pages/PlaneacionesNem";
 import HerramientasDocentes from "./pages/HerramientasDocentes";
 
 const cards = [
-  { titulo: "Simulador USICAMM", desc: "Practica con reactivos tipo examen real.", link: "/simulador-usicamm-2026", icono: "ðŸ“°" },
-  { titulo: "Promocion Horizontal", desc: "Recursos y simuladores para promocion horizontal USICAMM.", link: "/promocion-horizontal-usicamm", icono: "ðŸ“ˆ" },
-  { titulo: "Promocion Vertical", desc: "Recursos y simuladores para promocion vertical.", link: "/promocion-vertical-usicamm", icono: "ðŸš€" },
-  { titulo: "Reactivos PDF", desc: "Descarga reactivos y materiales PDF gratuitos.", link: "/reactivos-usicamm-pdf", icono: "ðŸ“„" },
-  { titulo: "Guia USICAMM 2026", desc: "Guia completa para el proceso USICAMM 2026.", link: "/guia-usicamm-2026", icono: "ðŸ“š" },
-  { titulo: "Planeaciones NEM", desc: "Planeaciones para la Nueva Escuela Mexicana.", link: "/planeaciones-nem", icono: "ðŸ—‚ï¸" },
-  { titulo: "Herramientas Docentes", desc: "Diagnostico, evaluacion formativa, test de estilos y mas.", link: "/herramientas-docentes", icono: "ðŸ› ï¸" },
+  { titulo: "Simulador USICAMM", desc: "Practica con reactivos tipo examen real.", link: "/simulador-usicamm-2026", icono: "SIM" },
+  { titulo: "Promocion Horizontal", desc: "Recursos y simuladores para promocion horizontal USICAMM.", link: "/promocion-horizontal-usicamm", icono: "PH" },
+  { titulo: "Promocion Vertical", desc: "Recursos y simuladores para promocion vertical.", link: "/promocion-vertical-usicamm", icono: "PV" },
+  { titulo: "Reactivos PDF", desc: "Descarga reactivos y materiales PDF gratuitos.", link: "/reactivos-usicamm-pdf", icono: "PDF" },
+  { titulo: "Guia USICAMM 2026", desc: "Guia completa para el proceso USICAMM 2026.", link: "/guia-usicamm-2026", icono: "GU" },
+  { titulo: "Planeaciones NEM", desc: "Planeaciones para la Nueva Escuela Mexicana.", link: "/planeaciones-nem", icono: "NEM" },
+  { titulo: "Herramientas Docentes", desc: "Diagnostico, evaluacion formativa, test de estilos y mas.", link: "/herramientas-docentes", icono: "HER" },
 ];
 
 function Home() {
