@@ -1,4 +1,4 @@
-﻿import { Link, Routes, Route } from "react-router-dom";
+import { Link, Routes, Route } from "react-router-dom";
 import HorasAdicionales from "./pages/HorasAdicionales";
 import SimuladorUsicamm2026 from "./pages/SimuladorUsicamm2026";
 import AdmisionDocente2026 from "./pages/AdmisionDocente2026";
@@ -13,12 +13,13 @@ import PlaneacionesNem from "./pages/PlaneacionesNem";
 import HerramientasDocentes from "./pages/HerramientasDocentes";
 
 const cards = [
-  { titulo: "Simulador USICAMM", desc: "Practica con reactivos tipo examen real.", link: "/simulador-usicamm-2026", icono: "📰" },
-  { titulo: "Promocion Vertical", desc: "Recursos y simuladores para promocion vertical.", link: "/promocion-vertical-usicamm", icono: "🚀" },
-  { titulo: "Reactivos PDF", desc: "Descarga reactivos y materiales PDF gratuitos.", link: "/reactivos-usicamm-pdf", icono: "📄" },
-  { titulo: "Guia USICAMM 2026", desc: "Guia completa para el proceso USICAMM 2026.", link: "/guia-usicamm-2026", icono: "📚" },
-  { titulo: "Planeaciones NEM", desc: "Planeaciones para la Nueva Escuela Mexicana.", link: "/planeaciones-nem", icono: "🗂️" },
-  { titulo: "Herramientas Docentes", desc: "Diagnostico, evaluacion formativa, test de estilos y mas.", link: "/herramientas-docentes", icono: "🛠️" },
+  { titulo: "Simulador USICAMM", desc: "Practica con reactivos tipo examen real.", link: "/simulador-usicamm-2026", icono: "ðŸ“°" },
+  { titulo: "Promocion Horizontal", desc: "Recursos y simuladores para promocion horizontal USICAMM.", link: "/promocion-horizontal-usicamm", icono: "ðŸ“ˆ" },
+  { titulo: "Promocion Vertical", desc: "Recursos y simuladores para promocion vertical.", link: "/promocion-vertical-usicamm", icono: "ðŸš€" },
+  { titulo: "Reactivos PDF", desc: "Descarga reactivos y materiales PDF gratuitos.", link: "/reactivos-usicamm-pdf", icono: "ðŸ“„" },
+  { titulo: "Guia USICAMM 2026", desc: "Guia completa para el proceso USICAMM 2026.", link: "/guia-usicamm-2026", icono: "ðŸ“š" },
+  { titulo: "Planeaciones NEM", desc: "Planeaciones para la Nueva Escuela Mexicana.", link: "/planeaciones-nem", icono: "ðŸ—‚ï¸" },
+  { titulo: "Herramientas Docentes", desc: "Diagnostico, evaluacion formativa, test de estilos y mas.", link: "/herramientas-docentes", icono: "ðŸ› ï¸" },
 ];
 
 function Home() {
